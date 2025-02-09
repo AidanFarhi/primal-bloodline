@@ -8,19 +8,19 @@ header {
 
 #logo {
     position: absolute;
-    left: 1vw;
+    left: 2vw;
 }
 
 #site-name {
     color: whitesmoke;
     font-family: Dancing Script, cursive;
-    font-size: 16px;
+    font-size: 20px;
     margin: 0;
 }
 
 #logout {
     position: absolute;
-    right: 1vw;
+    right: 2vw;
 }
 
 #logout:hover {
