@@ -1,0 +1,17 @@
+{{ define "base" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@2.0.3"></script>
+    <link rel="stylesheet" href="web/css/base.css">
+    <link rel="stylesheet" href="web/css/header.css">
+    <title>Primal Bloodline</title>
+</head>
+<body>
+    {{ template "header" . }}
+    {{ template "content" . }}
+</body>
+</html>
+{{ end }}

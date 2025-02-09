@@ -1,0 +1,3 @@
+*.pem
+init_secrets.sh
+tmp
