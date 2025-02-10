@@ -1,6 +1,7 @@
 #section-1 {
     color: white;
-    font-family: Dancing Script, cursive;
+    /* font-family: Dancing Script, cursive; */
+    /* font-family: Luminari, fantasy; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +15,8 @@
 }
 
 .sub-text {
-    font-size: 20px;
+    font-weight: 100;
+    font-size: 1em;
     opacity: 0.8;
 }
 
@@ -22,7 +24,8 @@
     background-color: black;
     box-shadow: 0px 18px 59px 73px rgba(0,0,0,1);
     color: white;
-    font-family: Dancing Script, cursive;
+    /* font-family: Dancing Script, cursive; */
+    /* font-family: Luminari, fantasy; */
     display: flex;
     flex-direction: column;
     align-items: center;

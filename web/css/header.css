@@ -13,7 +13,8 @@ header {
 
 #site-name {
     color: whitesmoke;
-    font-family: Dancing Script, cursive;
+    /* font-family: Dancing Script, cursive; */
+    /* font-family: Luminari, fantasy; */
     font-size: 20px;
     margin: 0;
 }
