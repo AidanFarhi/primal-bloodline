@@ -22,6 +22,7 @@ func main() {
 
 	m.HandleFunc("/", handler.HomeHandler)
 	m.HandleFunc("GET /about", handler.AboutHandler)
+	m.HandleFunc("GET /tree", handler.TreeHandler)
 
 	server := http.Server{
 		Addr:    "0.0.0.0:443",

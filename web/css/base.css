@@ -1,10 +1,9 @@
-/* remove default styling */
+/* remove default styling - START */
 * {
     margin: 0;
     padding: 0;
 }
 
-/* remove default styling */
 button, input[type="submit"], input[type="reset"] {
 	background: none;
 	color: inherit;
@@ -14,6 +13,17 @@ button, input[type="submit"], input[type="reset"] {
 	cursor: pointer;
 	outline: inherit;
 }
+
+a {
+    color: #0060B6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration:none; 
+    cursor:pointer;  
+}
+/* remove default styling - END */
 
 body {
     height: 100vh;

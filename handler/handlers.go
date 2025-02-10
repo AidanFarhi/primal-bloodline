@@ -22,3 +22,12 @@ func AboutHandler(w http.ResponseWriter, r *http.Request) {
 	)
 	t.ExecuteTemplate(w, "base", nil)
 }
+
+func TreeHandler(w http.ResponseWriter, r *http.Request) {
+	t, _ := template.ParseFiles(
+		"web/templates/header.html",
+		"web/templates/base.html",
+		"web/templates/tree.html",
+	)
+	t.ExecuteTemplate(w, "base", nil)
+}
