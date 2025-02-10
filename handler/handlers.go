@@ -1,33 +1,18 @@
 package handler
 
 import (
+	"fmt"
 	"html/template"
 	"net/http"
 )
 
-func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	t, _ := template.ParseFiles(
-		"web/templates/header.html",
-		"web/templates/base.html",
-		"web/templates/home.html",
-	)
-	t.ExecuteTemplate(w, "base", nil)
-}
-
-func AboutHandler(w http.ResponseWriter, r *http.Request) {
-	t, _ := template.ParseFiles(
-		"web/templates/header.html",
-		"web/templates/base.html",
-		"web/templates/about.html",
-	)
-	t.ExecuteTemplate(w, "base", nil)
-}
-
-func TreeHandler(w http.ResponseWriter, r *http.Request) {
-	t, _ := template.ParseFiles(
-		"web/templates/header.html",
-		"web/templates/base.html",
-		"web/templates/tree.html",
-	)
-	t.ExecuteTemplate(w, "base", nil)
+func NewHandler(pageName string) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		t, _ := template.ParseFiles(
+			"web/templates/header.html",
+			"web/templates/base.html",
+			fmt.Sprintf("web/templates/%s.html", pageName),
+		)
+		t.ExecuteTemplate(w, "base", nil)
+	}
 }

@@ -20,9 +20,9 @@ func main() {
 
 	m.Handle("/web/", http.StripPrefix("/web/", fs))
 
-	m.HandleFunc("/", handler.HomeHandler)
-	m.HandleFunc("GET /about", handler.AboutHandler)
-	m.HandleFunc("GET /tree", handler.TreeHandler)
+	m.HandleFunc("/", handler.NewHandler("home"))
+	m.HandleFunc("GET /about", handler.NewHandler("about"))
+	m.HandleFunc("GET /tree", handler.NewHandler("tree"))
 
 	server := http.Server{
 		Addr:    "0.0.0.0:443",
