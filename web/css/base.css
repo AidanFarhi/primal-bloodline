@@ -20,5 +20,12 @@ body {
 	background-color: rgba(0, 0, 0);
     display: grid;
     grid-template-rows: 7.5vh 1fr;
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+	background-image: url('/web/images/cat2doctored.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#main-container {
+	overflow-y: auto;
 }

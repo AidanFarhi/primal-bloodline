@@ -12,7 +12,10 @@
 </head>
 <body>
     {{ template "header" . }}
-    {{ template "content" . }}
+    <div id="main-container">
+        {{ template "content" . }}
+    </div>
+    <script src="web/js/home.js"></script>
 </body>
 </html>
 {{ end }}
