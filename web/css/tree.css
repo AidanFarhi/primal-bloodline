@@ -1,0 +1,20 @@
+#tree>svg {
+    background-color: #000000;
+}
+
+g {
+    color: red;
+}
+
+.node.male>text, .node.female>text {
+    font-family: Copperplate, fantasy;
+}
+
+.node.male>rect {
+    fill: #005682d1;
+}
+
+
+.node.female>rect {
+    fill: #bb006187;
+}

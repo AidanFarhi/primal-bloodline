@@ -35,6 +35,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 	font-family: Copperplate, fantasy;
+	overflow-x: hidden;
 }
 
 #main-container {
