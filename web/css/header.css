@@ -6,15 +6,8 @@ header {
     justify-content: center;
 }
 
-/* #logo {
-    position: absolute;
-    left: 2vw;
-} */
-
 #site-name {
     color: whitesmoke;
-    /* font-family: Dancing Script, cursive; */
-    /* font-family: Luminari, fantasy; */
     font-size: 20px;
     margin: 0;
 }
