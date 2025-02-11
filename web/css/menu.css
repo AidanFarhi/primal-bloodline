@@ -1,0 +1,26 @@
+#menu {
+	position: absolute;
+	top: 7.5vh;
+	height: 92.5vh;
+	width: 10vw;
+	transform: translateX(100vw);
+	transition: transform 0.2s ease-in-out;
+	background-color: transparent;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	color: white;
+}
+
+#menu.open {
+	transform: translateX(90vw);
+}
+
+.menu-link {
+    padding-top: 2.5em;
+}
+
+.menu-link:hover {
+    opacity: 0.8;
+}

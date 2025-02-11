@@ -12,12 +12,37 @@ header {
     margin: 0;
 }
 
-#logout {
+#burger-icon {
     position: absolute;
     right: 2vw;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-#logout:hover {
+#burger-icon:hover {
     cursor: pointer;
     opacity: 0.85;
+}
+
+#burger-icon {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.line {
+    transition: all 0.3s ease;
+}
+
+.burger.active .top {
+    transform: rotate(40.5deg);
+    transform-origin: 0 0;
+}
+
+.burger.active .middle {
+    opacity: 0;
+}
+
+.burger.active .bottom {
+    transform: rotate(-40.5deg);
+    transform-origin: 0 100%;
 }
