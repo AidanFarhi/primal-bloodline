@@ -6,7 +6,7 @@ source ./scripts/init_secrets.sh
 echo "getting instance id"
 instance_id=$( \
     aws ec2 describe-instances \
-        --filters "Name=tag:Name,Values=kashtrack-server" \
+        --filters "Name=tag:Name,Values=FIXME" \
         --query "Reservations[*].Instances[*].InstanceId" \
         --output text \
 )
