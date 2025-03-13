@@ -39,5 +39,7 @@ body {
 }
 
 #main-container {
+	grid-column: 1/2;
+	grid-row: 2/3;
 	overflow-y: auto;
 }

@@ -1,0 +1,14 @@
+#contact-form {
+    margin: 0 auto;
+    margin-top: 30vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+    padding: 2rem;
+}
+
+/* .contact-form-label {
+    color: white;
+} */
