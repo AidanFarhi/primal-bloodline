@@ -1,0 +1,60 @@
+/*--- remove default styling ---*/
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }
+ /*-----------------------------*/
+
+#top-navbar {
+    position: sticky;
+    top: 0;
+    height: 15vh;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Amita;
+    color: white;
+    background-color: black;
+}
+
+#left-nav-link {
+    margin-left: 2rem;
+    font-size: 40px;
+}
+
+#right-nav-links {
+    margin-right: 2rem;
+    font-size: 24px;
+}
+
+.right-nav-link {
+    padding-left: 1rem;
+}
+
+#hero-overlay {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 185vh;
+    background-image: url("/web/images/don_don.jpeg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: 2;
+}
+
+.home-section {
+    height: 85vh;
+    background-color: black;
+}
