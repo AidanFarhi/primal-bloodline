@@ -2,3 +2,4 @@
 init_secrets.sh
 tmp
 .env
+.DS_Store
