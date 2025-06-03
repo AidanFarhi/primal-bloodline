@@ -3,9 +3,10 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+}
+
+p {
+    margin: none;
 }
 
 a, a:hover, a:focus, a:active {
@@ -54,7 +55,76 @@ a, a:hover, a:focus, a:active {
     z-index: 2;
 }
 
+#hero-section {
+    background-color: black;
+}
+
 .home-section {
     height: 85vh;
+    background-color: white;
+    color: black;
+    font-family: Amita;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+}
+
+.section-header {
+    margin-top: 8rem;
+    font-size: 40px;
+}
+
+.content-container {
+    height: 55vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.section-image-large {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    padding: 7rem;
+}
+
+.section-text {
+    font-size: 24px;
+    padding: 7rem;
+}
+
+.image-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-link {
     background-color: black;
+    color: white;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 5px;
+}
+
+.section-link:hover {
+    background-color: rgba(0, 0, 0, 0.408);
+    transition: all 0.25s ease;
+}
+
+.section-image-small {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    padding: 7rem;
 }
