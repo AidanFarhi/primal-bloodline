@@ -13,7 +13,7 @@ a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
 }
- /*-----------------------------*/
+/*-----------------------------*/
 
 #top-navbar {
     position: fixed;
@@ -26,7 +26,7 @@ a, a:hover, a:focus, a:active {
     justify-content: space-between;
     font-family: Amita;
     background: transparent;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     z-index: 100;
     color: white;
 }
@@ -56,10 +56,10 @@ a, a:hover, a:focus, a:active {
 }
 
 #hero-section {
-    background-image: url("/web/images/don_don_doctored.jpeg");
+    background-image: url("/web/images/don_don_doctoredv2.jpeg");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 185vh;
 }
 
 .home-section {
@@ -135,8 +135,17 @@ a, a:hover, a:focus, a:active {
 }
 
 #mission-section {
+    margin-top: 100vh;
     background-color: white;
-    z-index: 3;
+    color: black;
+    width: 100vw;
+    height: 90vh;
+    opacity: 0.8;
+}
+
+#mission-section.content-container {
+    padding-left: 12rem;
+    padding-right: 12rem;
 }
 
 #contact-section {
