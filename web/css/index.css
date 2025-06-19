@@ -43,12 +43,12 @@ a, a:hover, a:focus, a:active {
 
 #left-nav-link {
     margin-left: 5rem;
-    font-size: 38px;
+    font-size: 32px;
 }
 
 #right-nav-links {
     margin-right: 5rem;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .right-nav-link {
@@ -70,8 +70,6 @@ a, a:hover, a:focus, a:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 9rem;
-    padding-right: 9rem;
 }
 
 .header-container {
@@ -83,7 +81,7 @@ a, a:hover, a:focus, a:active {
 
 .section-header {
     margin-top: 8rem;
-    font-size: 35px;
+    font-size: 32px;
 }
 
 .content-container {
@@ -101,7 +99,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .section-text {
-    font-size: 22px;
+    font-size: 18px;
     padding: 7rem;
 }
 
@@ -140,12 +138,7 @@ a, a:hover, a:focus, a:active {
     color: black;
     width: 100vw;
     height: 90vh;
-    opacity: 0.8;
-}
-
-#mission-section.content-container {
-    padding-left: 12rem;
-    padding-right: 12rem;
+    opacity: 0.7;
 }
 
 #contact-section {
