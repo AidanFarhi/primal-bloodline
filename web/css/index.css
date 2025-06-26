@@ -25,13 +25,16 @@ a, a:hover, a:focus, a:active {
     align-items: center;
     justify-content: space-between;
     font-family: Amita;
-    background: transparent;
     transition: all 0.2s ease;
     z-index: 100;
+}
+
+#top-navbar.top {
+    background: transparent;
     color: white;
 }
 
-#top-navbar.scrolled {
+#top-navbar.middle {
     background-color: white;
     color: black;
 }
