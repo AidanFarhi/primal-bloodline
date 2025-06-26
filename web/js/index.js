@@ -1,6 +1,7 @@
-const navBar = document.getElementById('top-navbar')
 
+// scrolling effect
 window.addEventListener('scroll', () => {
+    const navBar = document.getElementById('top-navbar')
     const scrollTop = window.scrollY
     const windowHeight = window.innerHeight
     const documentHeight = document.documentElement.scrollHeight
