@@ -55,7 +55,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .right-nav-link {
-    padding-left: 1rem;
+    padding-left: 2rem;
 }
 
 #hero-section {
@@ -92,6 +92,8 @@ a, a:hover, a:focus, a:active {
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-left: 15vw;
+    padding-right: 15vw;
 }
 
 .section-image-large {
