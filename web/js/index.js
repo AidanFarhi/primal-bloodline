@@ -27,17 +27,14 @@ window.addEventListener('scroll', () => {
     const middleDetected = divsToCheck.some(div => touching(navBar, div))
     let bottomDetected = touching(navBar, contactDiv)
     if (bottomDetected) {
-        console.log('bottom')
         navBar.classList.remove('top')
         navBar.classList.remove('middle')
         navBar.classList.add('bottom')
     } else if (middleDetected) {
-        console.log('middle')
         navBar.classList.remove('top')
         navBar.classList.remove('bottom')
         navBar.classList.add('middle')
     } else {
-        console.log('top')
         navBar.classList.remove('bottom')
         navBar.classList.remove('middle')
         navBar.classList.add('top')

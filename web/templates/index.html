@@ -1,5 +1,14 @@
 {{ template "layout.html" }}
 {{ define "content" }}
+<nav class="top" id="top-navbar">
+    <a id="left-nav-link" class="nav-link" href="/">Primal Bloodline</a>
+    <div id="right-nav-links">
+        <a class="nav-link right-nav-link" href="/about">About</a>
+        <a class="nav-link right-nav-link" href="/kittens">Cats</a>
+        <a class="nav-link right-nav-link" href="/about">Bloodline</a>
+        <a class="nav-link right-nav-link" href="/about">Contact</a>
+    </div>
+</nav>
 <div class="home-section" id="hero-section">
     <div id="mission-section">
         <div class="header-container" id="mission-header">
@@ -7,10 +16,10 @@
         </div>
         <div class="content-container" id="mission-content">
             <img class="section-image-large" src="/web/images/mina.jpeg" alt="">
-            <p class="section-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Provident atque iste, ab, officia maiores inventore exercitationem nihil culpa 
-                corporis quis quibusdam commodi animi, eos incidunt excepturi explicabo qui optio ipsum!
+            <p class="section-text" id="mission-text">
+                Our mission is to cultivate the purest breed of Maine Coon
+                cats. A cat that exhibits the primal and feral nature of
+                the wild.
             </p>
         </div>
     </div>
@@ -21,13 +30,11 @@
     </div>
     <div class="content-container">
         <p class="section-text">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Provident atque iste, ab, officia maiores inventore exercitationem nihil culpa 
-            corporis quis quibusdam commodi animi, eos incidunt excepturi explicabo qui optio ipsum!
+            View all of our available kittens.
         </p>
         <div class="image-button-container">
             <img class="section-image-small" src="/web/images/mina.jpeg" alt="">
-            <a class="section-link" href="/cats">View Kittens</a>
+            <a class="section-link" href="/kittens">View Kittens</a>
         </div>
     </div>
 </div>
@@ -73,4 +80,5 @@
         </p>
     </div>
 </div>
+<script defer src="web/js/index.js"></script>
 {{ end }}
