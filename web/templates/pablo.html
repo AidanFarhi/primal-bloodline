@@ -1,0 +1,34 @@
+{{ template "layout.html" }}
+{{ define "content" }}
+<nav id="kittens-top-navbar">
+    <a id="kittens-left-nav-link" class="kittens-nav-link" href="/">Primal Bloodline</a>
+    <div id="kittens-right-nav-links">
+        <a class="kittens-nav-link kittens-right-nav-link" href="/about">About</a>
+        <a class="kittens-nav-link kittens-right-nav-link" href="/kittens">Cats</a>
+        <a class="kittens-nav-link kittens-right-nav-link" href="/about">Bloodline</a>
+        <a class="kittens-nav-link kittens-right-nav-link" href="/about">Contact</a>
+    </div>
+</nav>
+<div class="cat-details-container">
+    <div class="cat-details-sub-container">
+        <img class="cat-details-image" src="/web/images/mina.jpeg" alt=" a cat photo">
+        <div class="cat-details-text">
+            <p class="cat-name">Pablo</p>
+            <p class="cat-price">$4,000</p>
+            <div class="cat-details-sub-text">
+                <p class="cat-detail-label">DOB:</p><p class="cat-detail">2025-02-12</p>
+            </div>
+            <div class="cat-details-sub-text">
+                <p class="cat-detail-label">Litter:</p><p class="cat-detail">Alpha</p>
+            </div>
+            <div class="cat-details-sub-text">
+                <p class="cat-detail-label">Age:</p><p class="cat-detail">5 Months</p>
+            </div>
+            <div class="cat-details-sub-text">
+                <p class="cat-detail-label">Color:</p><p class="cat-detail">Blue/Black</p>
+            </div>
+            <a class="cat-details-link" href="/cat-details/mina">Inquire</a>
+        </div>
+    </div>
+</div>
+{{ end }}

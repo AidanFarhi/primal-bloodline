@@ -1,0 +1,68 @@
+.cat-details-container {
+    margin-top: 15vh;
+    height: 85vh;
+    width: 100vw;
+    font-family: Amita;
+}
+
+.cat-details-sub-container {
+    display: flex;
+    padding-top: 8vh;
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+
+.cat-details-image {
+    height: 40rem;
+    width: 40rem;
+    border-radius: 10px;
+}
+
+.cat-details-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding-left: 7rem;
+}
+
+.cat-name {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.cat-price {
+    opacity: 0.7;
+    margin-bottom: 1rem;
+}
+
+.cat-details-sub-text {
+    display: flex;
+}
+
+.cat-detail-label {
+    margin-right: 1rem;
+}
+
+.cat-detail {
+    opacity: 0.8;
+}
+
+.cat-details-link {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.cat-details-link:hover {
+    background-color: rgba(0, 0, 0, 0.408);
+    transition: all 0.15s ease;
+}

@@ -6,7 +6,7 @@ body {
 }
 
 p {
-    margin: none;
+    all: unset;
 }
 
 a, a:hover, a:focus, a:active {
