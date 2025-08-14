@@ -1,0 +1,29 @@
+#alternate-top-navbar {
+    position: fixed;
+    top: 0;
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Amita;
+    transition: all 0.2s ease;
+    z-index: 100;
+    background-color: black;
+    color: white;
+}
+
+#alternate-nav-right-links {
+    margin-right: 5rem;
+    font-size: 18px;
+}
+
+.alternate-nav-right-link {
+    padding-left: 2rem;
+}
+
+#alternate-nav-left-link {
+    margin-left: 5rem;
+    font-size: 32px;
+}

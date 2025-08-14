@@ -1,14 +1,6 @@
 {{ template "layout.html" }}
 {{ define "content" }}
-<nav class="top" id="top-navbar">
-    <a id="left-nav-link" class="nav-link" href="/">Primal Bloodline</a>
-    <div id="right-nav-links">
-        <a class="nav-link right-nav-link" href="/about">About</a>
-        <a class="nav-link right-nav-link" href="/kittens">Cats</a>
-        <a class="nav-link right-nav-link" href="/about">Bloodline</a>
-        <a class="nav-link right-nav-link" href="/about">Contact</a>
-    </div>
-</nav>
+{{ template "main-nav" }}
 <div class="home-section" id="hero-section">
     <div id="mission-section">
         <div class="header-container" id="mission-header">
@@ -80,5 +72,4 @@
         </p>
     </div>
 </div>
-<script defer src="web/js/index.js"></script>
 {{ end }}
