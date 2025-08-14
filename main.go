@@ -38,6 +38,15 @@ func CatDetailsHandler(w http.ResponseWriter, r *http.Request) {
 	t.Execute(w, nil)
 }
 
+func InquireHandler(w http.ResponseWriter, r *http.Request) {
+	t, _ := template.ParseFiles(
+		"web/templates/layout.html",
+		"web/templates/partials/alternate-nav.html",
+		"web/templates/inquire.html",
+	)
+	t.Execute(w, nil)
+}
+
 func main() {
 
 	mux := http.NewServeMux()
@@ -49,6 +58,7 @@ func main() {
 	mux.HandleFunc("/", IndexHandler)
 	mux.HandleFunc("/kittens", KittensHandler)
 	mux.HandleFunc("/cat-details/", CatDetailsHandler)
+	mux.HandleFunc("/inquire", InquireHandler)
 
 	s := http.Server{
 		Addr:    ":1337",

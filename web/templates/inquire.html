@@ -1,7 +1,17 @@
-{{ template "layout.hml" }}
-{{ define "content "}}
+{{ template "layout" }}
+{{ define "content" }}
 {{ template "alternate-nav" }}
-<div class="contact-form-container">
-    <p>Yolo</p>
+<div class="contact-main-container">
+    <div class="form-container">
+        <form action="/api/inquire" method="post">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Message</label><br>
+            <input type="text" id="message" name="message"><br>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
 </div>
 {{ end }}
