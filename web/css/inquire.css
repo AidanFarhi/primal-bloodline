@@ -1,5 +1,35 @@
 .contact-main-container {
+    font-family: Amita;
     margin-top: 15vh;
     height: 85vh;
     width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    padding: 1rem;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 2px;
+}
+
+.form-header {
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+
+.form-input {
+    margin-bottom: 1rem;
+}
+
+.text-input {
+    height: 1.5rem;
+    width: 15rem;
+}
+
+.text-message {
+    resize: none;
+    height: 5rem;
+    width: 15rem;
 }

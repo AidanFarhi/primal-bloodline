@@ -3,13 +3,23 @@
 {{ template "alternate-nav" }}
 <div class="contact-main-container">
     <div class="form-container">
-        <form action="/api/inquire" method="post">
-            <label for="name">Name</label><br>
-            <input type="text" id="name" name="name"><br>
-            <label for="email">Email</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="message">Message</label><br>
-            <input type="text" id="message" name="message"><br>
+        <p class="form-header">Inquire</p>
+        <p class="form-sub-text">
+            Send us any questions you have about us or our felines.
+        </p>
+        <form class="contact-form" action="/api/inquire" method="post">
+            <label class="form-label" for="name">Name</label>
+            <br>
+            <input class="form-input text-input" type="text" id="name" name="name">
+            <br>
+            <label class="form-label" for="email">Email</label>
+            <br>
+            <input class="form-input text-input" type="email" id="email" name="email">
+            <br>
+            <label class="form-label" for="message">Message</label>
+            <br>
+            <textarea class="form-input text-message" id="message" name="message"></textarea>
+            <br>
             <button type="submit">Send Message</button>
         </form>
     </div>
