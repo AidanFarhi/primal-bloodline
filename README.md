@@ -4,7 +4,7 @@ Adia's breeder website.
 
 #### todos
 
-[ ] show picture and pre-populate kitten info
+[X] show picture and pre-populate kitten info
 
 [ ] implement send message
 

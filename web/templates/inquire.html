@@ -2,10 +2,13 @@
 {{ define "content" }}
 {{ template "alternate-nav" }}
 <div class="contact-main-container">
+    <div class="contact-image-container">
+        <img class="contact-image" src="/web/images/{{ .CatName }}.jpeg" alt="a cat picture">
+    </div>
     <div class="form-container">
         <p class="form-header">Inquire</p>
         <p class="form-sub-text">
-            Send us any questions you have about us or our felines.
+            Send us any questions you have about {{ .CatName }}.
         </p>
         <form class="contact-form" action="/api/inquire" method="post">
             <label class="form-label" for="name">Name</label>

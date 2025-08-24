@@ -8,10 +8,15 @@
     justify-content: center;
 }
 
+.contact-image-container > .contact-image {
+    height: 40rem;
+    width: 40rem;
+    border-radius: 10px;
+    margin-right: 3rem;
+}
+
 .form-container {
-    padding: 1rem;
-    border: 1px solid rgba(128, 128, 128, 0.25);
-    border-radius: 2px;
+    width: 20rem;
 }
 
 .form-header {

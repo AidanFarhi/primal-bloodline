@@ -1,29 +1,25 @@
 .cat-details-container {
+    font-family: Amita;
     margin-top: 15vh;
     height: 85vh;
     width: 100vw;
-    font-family: Amita;
-}
-
-.cat-details-sub-container {
     display: flex;
-    padding-top: 8vh;
-    padding-left: 15vw;
-    padding-right: 15vw;
+    align-items: center;
+    justify-content: center;
 }
 
 .cat-details-image {
     height: 40rem;
     width: 40rem;
     border-radius: 10px;
+    margin-right: 3rem;
 }
 
 .cat-details-text {
-    width: 100%;
+    width: 20rem;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    padding-left: 7rem;
+    justify-content: center;
 }
 
 .cat-name {
@@ -52,14 +48,12 @@
     background-color: black;
     color: rgb(255, 255, 255);
     text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
     padding-top: 8px;
     padding-bottom: 8px;
     border-radius: 5px;
+    margin-right: 10rem;
     cursor: pointer;
     margin-top: 1rem;
-    margin-bottom: 2rem;
 }
 
 .cat-details-link:hover {
