@@ -23,6 +23,21 @@ a, a:hover, a:focus, a:active {
     height: 185vh;
 }
 
+#hero-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  pointer-events: none;
+}
+
 .home-section {
     height: 85vh;
     background-color: rgb(255, 255, 255);
@@ -97,7 +112,7 @@ a, a:hover, a:focus, a:active {
 
 #mission-section {
     margin-top: 100vh;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.15);
     color: rgb(239, 239, 239);
     width: 100%;
     height: 90vh;
