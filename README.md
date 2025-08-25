@@ -6,6 +6,8 @@ Adia's breeder website.
 
 [X] show picture and pre-populate kitten info
 
+[ ] blur the line between the hero section and the next section
+
 [ ] implement send message
 
 [ ] mobile responsive
