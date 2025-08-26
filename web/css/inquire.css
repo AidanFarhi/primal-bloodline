@@ -30,11 +30,29 @@
 
 .text-input {
     height: 1.5rem;
-    width: 15rem;
+    width: 19rem;
 }
 
 .text-message {
     resize: none;
     height: 5rem;
-    width: 15rem;
+    width: 19rem;
+}
+
+.contact-submit-button {
+    font-family: Amita;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 8px 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border: none;
+}
+
+.contact-submit-button:hover {
+    background-color: rgba(0, 0, 0, 0.408);
+    transition: all 0.15s ease;
 }

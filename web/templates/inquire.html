@@ -3,7 +3,7 @@
 {{ template "alternate-nav" }}
 <div class="contact-main-container">
     <div class="contact-image-container">
-        <img class="contact-image" src="/web/images/{{ .CatName }}.jpeg" alt="a cat picture">
+        <img class="contact-image" src="/web/images/{{ .ImageCatName }}.jpeg" alt="a cat picture">
     </div>
     <div class="form-container">
         <p class="form-header">Inquire</p>
@@ -23,7 +23,7 @@
             <br>
             <textarea class="form-input text-message" id="message" name="message"></textarea>
             <br>
-            <button type="submit">Send Message</button>
+            <button class="contact-submit-button" type="submit">Send Message</button>
         </form>
     </div>
 </div>

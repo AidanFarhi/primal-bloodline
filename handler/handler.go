@@ -44,12 +44,17 @@ func CatDetailsHandler(w http.ResponseWriter, r *http.Request) {
 func InquireHandler(w http.ResponseWriter, r *http.Request) {
 	catName := strings.TrimPrefix(r.URL.Path, "/inquire/")
 	catName = path.Clean(catName)
+	titleCatName := strings.ToUpper(catName[0:1]) + catName[1:]
+	pageData := map[string]string{
+		"ImageCatName": catName,
+		"CatName":      titleCatName,
+	}
 	t, _ := template.ParseFiles(
 		"web/templates/layout.html",
 		"web/templates/partials/alternate-nav.html",
 		"web/templates/inquire.html",
 	)
-	t.Execute(w, map[string]string{"CatName": catName})
+	t.Execute(w, pageData)
 }
 
 // Helper function to extract cat name from URL path
