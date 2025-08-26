@@ -6,7 +6,7 @@ Adia's breeder website.
 
 [X] show picture and pre-populate kitten info
 
-[ ] blur the line between the hero section and the next section
+[X] blur the line between the hero section and the next section
 
 [ ] implement send message
 
@@ -14,4 +14,10 @@ Adia's breeder website.
 
 [ ] refactor HTML/CSS
 
+[ ] hover affect for links?
+
 [ ] break site into partials?
+
+[ ] Figure out certs
+
+[ ] Deploy
