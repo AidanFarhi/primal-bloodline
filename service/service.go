@@ -11,5 +11,6 @@ func NewContactService(c config.Config) ContactService {
 }
 
 func (cs ContactService) SendMessage(name, email, message string) error {
+	// finalMessage := name + "\n" + email + "\n" + message
 	return nil
 }
