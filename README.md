@@ -10,6 +10,8 @@ Adia's breeder website.
 
 [ ] implement send message
 
+[ ] implement rate limiting
+
 [ ] mobile responsive
 
 [ ] refactor HTML/CSS
