@@ -1,36 +1,26 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"net/http"
 	"os"
 	"primalbl/config"
 	"primalbl/handler"
+	"primalbl/service"
 )
-
-func loadConfig(configPath string, conf *config.Config) error {
-	fileBytes, err := os.ReadFile(configPath)
-	if err != nil {
-		return err
-	}
-	err = json.Unmarshal(fileBytes, conf)
-	if err != nil {
-		return err
-	}
-	return nil
-}
 
 func main() {
 
 	conf := config.Config{}
 
-	err := loadConfig("./config.json", &conf)
+	err := conf.Load("./config.json")
 
 	if err != nil {
 		fmt.Println("error loading config")
 		os.Exit(1)
 	}
+
+	cs := service.NewContactService(conf)
 
 	mux := http.NewServeMux()
 
@@ -39,9 +29,10 @@ func main() {
 	mux.Handle("/web/", fs)
 
 	mux.HandleFunc("/", handler.IndexHandler)
-	mux.HandleFunc("/kittens", handler.KittensHandler)
-	mux.HandleFunc("/cat-details/", handler.CatDetailsHandler)
-	mux.HandleFunc("/inquire/", handler.InquireHandler)
+	mux.HandleFunc("GET /kittens", handler.KittensHandler)
+	mux.HandleFunc("GET /cat-details/", handler.CatDetailsHandler)
+	mux.HandleFunc("GET /inquire/", handler.InquireHandler)
+	mux.HandleFunc("POST /api/contact", handler.NewContactHandler(cs))
 
 	s := http.Server{
 		Addr:    ":1337",

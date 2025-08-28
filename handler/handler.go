@@ -5,8 +5,16 @@ import (
 	"html/template"
 	"net/http"
 	"path"
+	"primalbl/service"
 	"strings"
 )
+
+// Helper function to extract cat name from URL path
+func ExtractCatNameFromPath(urlPath, prefix string) string {
+	catName := strings.TrimPrefix(urlPath, prefix)
+	catName = path.Clean(catName)
+	return catName
+}
 
 // GET /
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
@@ -57,9 +65,12 @@ func InquireHandler(w http.ResponseWriter, r *http.Request) {
 	t.Execute(w, pageData)
 }
 
-// Helper function to extract cat name from URL path
-func ExtractCatNameFromPath(urlPath, prefix string) string {
-	catName := strings.TrimPrefix(urlPath, prefix)
-	catName = path.Clean(catName)
-	return catName
+// POST /api/contact
+func NewContactHandler(cs service.ContactService) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		name := r.FormValue("name")
+		email := r.FormValue("email")
+		message := r.FormValue("message")
+		fmt.Println(name, email, message)
+	}
 }
