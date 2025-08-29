@@ -1,6 +1,12 @@
 package service
 
-import "primalbl/config"
+import (
+	"encoding/json"
+	"fmt"
+	"net/http"
+	"net/url"
+	"primalbl/config"
+)
 
 type ContactService struct {
 	Config config.Config
@@ -11,6 +17,21 @@ func NewContactService(c config.Config) ContactService {
 }
 
 func (cs ContactService) SendMessage(name, email, message string) error {
-	// finalMessage := name + "\n" + email + "\n" + message
+	finalMessage := name + "\n" + email + "\n" + message
+	values := url.Values{
+		"phone":   {cs.Config.PrimalBloodlinePhoneNumber},
+		"message": {finalMessage},
+		"key":     {cs.Config.TextbeltAPIKey},
+	}
+	resp, err := http.PostForm(cs.Config.TextbeltURL, values)
+	if err != nil {
+		return err
+	}
+	var responseData map[string]any
+	err = json.NewDecoder(resp.Body).Decode(&responseData)
+	if err != nil {
+		return err
+	}
+	fmt.Println(responseData)
 	return nil
 }

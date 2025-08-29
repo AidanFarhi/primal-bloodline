@@ -6,7 +6,9 @@ import (
 )
 
 type Config struct {
-	TextbeltAPIKey string `json:"textbelt_api_key"`
+	TextbeltAPIKey             string `json:"textbelt_api_key"`
+	TextbeltURL                string `json:"textbelt_url"`
+	PrimalBloodlinePhoneNumber string `json:"primal_bloodline_phone_number"`
 }
 
 func (c *Config) Load(filePath string) error {

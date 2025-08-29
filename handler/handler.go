@@ -71,6 +71,8 @@ func NewContactHandler(cs service.ContactService) http.HandlerFunc {
 		name := r.FormValue("name")
 		email := r.FormValue("email")
 		message := r.FormValue("message")
-		fmt.Println(name, email, message)
+		cs.SendMessage(name, email, message)
+		http.Redirect(w, r, "/", http.StatusFound)
+		return
 	}
 }
