@@ -30,6 +30,28 @@
 #left-nav-link {
     margin-left: 5rem;
     font-size: 32px;
+    /* background: linear-gradient(
+        to bottom,
+        #f5f5f5 0%,
+        #cccccc 15%,
+        #666666 20%,
+        #e0e0e0 60%,
+        #333333 75%,
+        #bbbbbb 80%,
+        #000000 90%,
+        #ffffff 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+    outline: none; */
+}
+
+#left-nav-link {
+    margin-left: 5rem;
+    font-size: 32px;
 }
 
 #right-nav-links {
