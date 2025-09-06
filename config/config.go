@@ -1,24 +1,21 @@
 package config
 
 import (
-	"encoding/json"
 	"os"
+	"strconv"
 )
 
 type Config struct {
-	TextbeltAPIKey             string `json:"textbelt_api_key"`
-	TextbeltURL                string `json:"textbelt_url"`
-	PrimalBloodlinePhoneNumber string `json:"primal_bloodline_phone_number"`
+	TextbeltAPIKey             string
+	TextbeltURL                string
+	PrimalBloodlinePhoneNumber string
+	Port                       int
 }
 
-func (c *Config) Load(filePath string) error {
-	fileBytes, err := os.ReadFile(filePath)
-	if err != nil {
-		return err
-	}
-	err = json.Unmarshal(fileBytes, c)
-	if err != nil {
-		return err
-	}
-	return nil
+func (c *Config) Load() {
+	c.TextbeltAPIKey = os.Getenv("API_KEY")
+	c.TextbeltURL = os.Getenv("TEXTBELT_URL")
+	c.PrimalBloodlinePhoneNumber = os.Getenv("PHONE_NUMBER")
+	// TODO: add logic to detect whether port is present or not
+	c.Port, _ = strconv.Atoi(os.Getenv("PORT"))
 }

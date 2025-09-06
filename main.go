@@ -1,24 +1,18 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"net/http"
-	"os"
 	"primalbl/config"
 	"primalbl/handler"
 	"primalbl/service"
+	"strconv"
 )
 
 func main() {
 
 	conf := config.Config{}
-
-	err := conf.Load("./config.json")
-
-	if err != nil {
-		fmt.Println("error loading config")
-		os.Exit(1)
-	}
+	conf.Load()
 
 	cs := service.NewContactService(conf)
 
@@ -35,9 +29,9 @@ func main() {
 	mux.HandleFunc("POST /api/contact", handler.NewContactHandler(cs))
 
 	s := http.Server{
-		Addr:    ":1337",
+		Addr:    ":" + strconv.Itoa(conf.Port),
 		Handler: mux,
 	}
 
-	s.ListenAndServe()
+	log.Fatal(s.ListenAndServe())
 }

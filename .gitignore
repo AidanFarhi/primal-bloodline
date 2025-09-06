@@ -2,5 +2,6 @@
 init_secrets.sh
 tmp
 .env
+local.env
 .DS_Store
 config.json
