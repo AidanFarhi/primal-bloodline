@@ -13,18 +13,30 @@
         <form class="contact-form" action="/api/contact" method="post">
             <label class="form-label" for="name">Name</label>
             <br>
-            <input class="form-input text-input" type="text" id="name" name="name">
+            <input class="form-input text-input" type="text" id="name" name="name" required>
             <br>
-            <label class="form-label" for="email">Email</label>
+            <label class="form-label" for="number">Phone Number</label>
             <br>
-            <input class="form-input text-input" type="email" id="email" name="email">
+            <input class="form-input text-input" type="tel" maxlength="12" id="number" name="number" required>
             <br>
             <label class="form-label" for="message">Message</label>
             <br>
-            <textarea class="form-input text-message" id="message" name="message"></textarea>
+            <textarea class="form-input text-message" id="message" name="message" maxlength="500" required></textarea>
             <br>
             <button class="contact-submit-button" type="submit">Send Message</button>
         </form>
     </div>
 </div>
+<script>
+    // phone number input formatter
+    document.getElementById('number').addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length > 6) {
+            value = value.replace(/(\d{3})(\d{3})(\d{0,4}).*/, '$1-$2-$3');
+        } else if (value.length > 3) {
+            value = value.replace(/(\d{3})(\d{0,3})/, '$1-$2');
+        }
+        e.target.value = value;
+    });
+</script>
 {{ end }}

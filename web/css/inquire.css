@@ -29,13 +29,14 @@
 }
 
 .text-input {
-    height: 1.5rem;
+    height: 2rem;
     width: 19rem;
+    font-size: 1.1rem;
 }
 
 .text-message {
     resize: none;
-    height: 10rem;
+    height: 12rem;
     width: 19rem;
 }
 
