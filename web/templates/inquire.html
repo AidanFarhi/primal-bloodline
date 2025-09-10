@@ -17,7 +17,7 @@
             <br>
             <label class="form-label" for="number">Phone Number</label>
             <br>
-            <input class="form-input text-input" type="tel" maxlength="12" id="number" name="number" required>
+            <input class="form-input text-input" type="tel" maxlength="14" id="number" name="number" required>
             <br>
             <label class="form-label" for="message">Message</label>
             <br>
@@ -28,13 +28,17 @@
     </div>
 </div>
 <script>
-    // phone number input formatter
     document.getElementById('number').addEventListener('input', function (e) {
-        let value = e.target.value.replace(/\D/g, '');
+        let value = e.target.value.replace(/\D/g, ''); // strip non-digits
         if (value.length > 6) {
-            value = value.replace(/(\d{3})(\d{3})(\d{0,4}).*/, '$1-$2-$3');
+            // Format: (XXX) XXX-XXXX
+            value = value.replace(/(\d{3})(\d{3})(\d{0,4}).*/, '($1) $2-$3');
         } else if (value.length > 3) {
-            value = value.replace(/(\d{3})(\d{0,3})/, '$1-$2');
+            // Format: (XXX) XXX
+            value = value.replace(/(\d{3})(\d{0,3})/, '($1) $2');
+        } else if (value.length > 0) {
+            // Start adding the opening (
+            value = value.replace(/(\d{0,3})/, '($1');
         }
         e.target.value = value;
     });
