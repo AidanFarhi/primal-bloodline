@@ -16,6 +16,13 @@ a, a:hover, a:focus, a:active {
 }
 /*-----------------------------*/
 
+/* @font-face {
+    font-family: 'PBLFont';
+    src: url('/web/fonts/pbl.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
 #hero-section {
     background-image: url("/web/images/don_don_bw_glowing_v2.png");
     background-size: cover;
@@ -43,6 +50,8 @@ a, a:hover, a:focus, a:active {
     background-color: rgb(255, 255, 255);
     color: black;
     font-family: Amita;
+    /* font-family: 'PBLFont'; */
+    letter-spacing: 1px;
     display: flex;
     flex-direction: column;
     align-items: center;
