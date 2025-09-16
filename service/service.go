@@ -16,8 +16,8 @@ func NewContactService(c config.Config) ContactService {
 	return ContactService{c}
 }
 
-func (cs ContactService) SendMessage(name, email, message string) error {
-	finalMessage := name + "\n" + email + "\n" + message
+func (cs ContactService) SendMessage(name, number, message string) error {
+	finalMessage := name + "\n" + number + "\n" + message
 	values := url.Values{
 		"phone":   {cs.Config.PrimalBloodlinePhoneNumber},
 		"message": {finalMessage},

@@ -69,9 +69,9 @@ func InquireHandler(w http.ResponseWriter, r *http.Request) {
 func NewContactHandler(cs service.ContactService) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		name := r.FormValue("name")
-		email := r.FormValue("email")
+		number := r.FormValue("number")
 		message := r.FormValue("message")
-		cs.SendMessage(name, email, message)
+		cs.SendMessage(name, number, message)
 		http.Redirect(w, r, "/", http.StatusFound)
 		return
 	}
