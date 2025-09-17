@@ -50,8 +50,15 @@
 }
 
 #left-nav-link {
-    margin-left: 5rem;
-    font-size: 32px;
+    margin-left: 1rem;
+    /* font-size: 32px; */
+}
+
+.site-title {
+    /* height: 135rem; */
+    width: 22.5rem;
+    fill: white;
+    margin-top: 0.5rem;
 }
 
 #right-nav-links {
