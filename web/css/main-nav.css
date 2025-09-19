@@ -1,7 +1,7 @@
 #top-navbar {
     position: fixed;
     top: 0;
-    height: 15vh;
+    height: 16vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -10,6 +10,19 @@
     font-family: Amita;
     transition: all 0.2s ease;
     z-index: 100;
+}
+
+.left-nav-container {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.left-icon {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
 }
 
 #top-navbar.top {
@@ -29,6 +42,10 @@
 #top-navbar.bottom {
     background-color: black;
     color: rgb(255, 255, 255);
+}
+
+#top-navbar.bottom .site-title {
+    fill: white;
 }
 
 #left-nav-link {

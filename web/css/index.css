@@ -25,6 +25,7 @@ a, a:hover, a:focus, a:active {
 
 #hero-section {
     background-image: url("/web/images/don_don_bw_glowing_v2.png");
+    /* background-image: url("/web/images/don_don_art.jpg"); */
     background-size: cover;
     background-position: center;
     height: 185vh;

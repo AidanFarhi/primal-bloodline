@@ -1,7 +1,7 @@
 #alternate-top-navbar {
     position: fixed;
     top: 0;
-    height: 15vh;
+    height: 16vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
