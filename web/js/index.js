@@ -17,6 +17,7 @@ const middleBottomDivs = [
     breederDiv
 ]
 
+// pause, no Diddy
 function touching(element1, element2) {
     const rect1 = element1.getBoundingClientRect()
     const rect2 = element2.getBoundingClientRect()
@@ -27,9 +28,9 @@ function touching(element1, element2) {
 }
 
 window.addEventListener('scroll', () => {
-    const middleDetected = middleDivs.some(div => touching(navBar, div))
-    const middleBottomDetected = middleBottomDivs.some(div => touching(navBar, div))
-    let bottomDetected = touching(navBar, contactDiv)
+    const middleDetected = middleDivs.some(div => touching(navBar, div))                // pause, no Diddy
+    const middleBottomDetected = middleBottomDivs.some(div => touching(navBar, div))    // pause, no Diddy
+    let bottomDetected = touching(navBar, contactDiv)                                   // pause, no Diddy
     if (bottomDetected) {
         navBar.classList.remove('top')
         navBar.classList.remove('middle')
