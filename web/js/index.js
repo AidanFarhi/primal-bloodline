@@ -6,9 +6,12 @@ const bloodlineDiv = document.getElementById('bloodline-section')
 const breederDiv = document.getElementById('breeder-section')
 const contactDiv = document.getElementById('contact-section')
 
-const divsToCheck = [
+const middleDivs = [
     missionHeader,
-    missionContent,
+    missionContent
+]
+
+const middleBottomDivs = [
     catDiv,
     bloodlineDiv,
     breederDiv
@@ -24,19 +27,28 @@ function touching(element1, element2) {
 }
 
 window.addEventListener('scroll', () => {
-    const middleDetected = divsToCheck.some(div => touching(navBar, div))
+    const middleDetected = middleDivs.some(div => touching(navBar, div))
+    const middleBottomDetected = middleBottomDivs.some(div => touching(navBar, div))
     let bottomDetected = touching(navBar, contactDiv)
     if (bottomDetected) {
         navBar.classList.remove('top')
         navBar.classList.remove('middle')
+        navBar.classList.remove('middle-bottom')
         navBar.classList.add('bottom')
+    } else if (middleBottomDetected) {
+        navBar.classList.remove('top')
+        navBar.classList.remove('middle')
+        navBar.classList.remove('bottom')
+        navBar.classList.add('middle-bottom')
     } else if (middleDetected) {
         navBar.classList.remove('top')
         navBar.classList.remove('bottom')
+        navBar.classList.remove('middle-bottom')
         navBar.classList.add('middle')
     } else {
         navBar.classList.remove('bottom')
         navBar.classList.remove('middle')
+        navBar.classList.remove('middle-bottom')
         navBar.classList.add('top')
     }
 })
