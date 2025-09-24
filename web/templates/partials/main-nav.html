@@ -73,7 +73,8 @@
         rightNavLinksDiv.classList.add('open')
     })
     document.addEventListener('click', event => {
-        if (event.target !== rightNavLinksDiv && !rightNavLinksDiv.contains(event.target) && event.target !== burgerMenuDiv && !burgerMenuDiv.contains(event.target)) {
+        if (event.target !== rightNavLinksDiv && !rightNavLinksDiv.contains(event.target) && 
+            event.target !== burgerMenuDiv && !burgerMenuDiv.contains(event.target)) {
             rightNavLinksDiv.classList.remove('open')
         }
     })
