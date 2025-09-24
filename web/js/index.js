@@ -5,6 +5,7 @@ const catDiv = document.getElementById('cat-section')
 const bloodlineDiv = document.getElementById('bloodline-section')
 const breederDiv = document.getElementById('breeder-section')
 const contactDiv = document.getElementById('contact-section')
+const burgerLines = Array.from(document.getElementsByClassName('burger-line'))
 
 const middleDivs = [
     missionHeader,
@@ -32,21 +33,25 @@ window.addEventListener('scroll', () => {
     const middleBottomDetected = middleBottomDivs.some(div => touching(navBar, div))    // pause, no Diddy
     let bottomDetected = touching(navBar, contactDiv)                                   // pause, no Diddy
     if (bottomDetected) {
+        burgerLines.forEach(e => e.classList.remove('middle-bottom'))
         navBar.classList.remove('top')
         navBar.classList.remove('middle')
         navBar.classList.remove('middle-bottom')
         navBar.classList.add('bottom')
     } else if (middleBottomDetected) {
+        burgerLines.forEach(e => e.classList.add('middle-bottom'))
         navBar.classList.remove('top')
         navBar.classList.remove('middle')
         navBar.classList.remove('bottom')
         navBar.classList.add('middle-bottom')
     } else if (middleDetected) {
+        burgerLines.forEach(e => e.classList.remove('middle-bottom'))
         navBar.classList.remove('top')
         navBar.classList.remove('bottom')
         navBar.classList.remove('middle-bottom')
         navBar.classList.add('middle')
     } else {
+        burgerLines.forEach(e => e.classList.remove('middle-bottom'))
         navBar.classList.remove('bottom')
         navBar.classList.remove('middle')
         navBar.classList.remove('middle-bottom')

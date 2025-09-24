@@ -56,10 +56,26 @@
             </svg>
         </a>
     </div>
-    <div id="right-nav-links">
-        <!-- <a class="nav-link right-nav-link" href="/about">About</a> -->
+    <div class="burger-menu">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+    </div>
+    <div class="right-nav-links">
         <a class="nav-link right-nav-link" href="/kittens">Kittens</a>
         <a class="nav-link right-nav-link" href="/contract">Contract</a>
     </div>
 </nav>
+<script>
+    const rightNavLinksDiv = document.getElementsByClassName('right-nav-links')[0]
+    const burgerMenuDiv = document.getElementsByClassName('burger-menu')[0]
+    burgerMenuDiv.addEventListener('click', () => {
+        rightNavLinksDiv.classList.add('open')
+    })
+    document.addEventListener('click', event => {
+        if (event.target !== rightNavLinksDiv && !rightNavLinksDiv.contains(event.target) && event.target !== burgerMenuDiv && !burgerMenuDiv.contains(event.target)) {
+            rightNavLinksDiv.classList.remove('open')
+        }
+    })
+</script>
 {{ end }}
