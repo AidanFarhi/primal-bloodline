@@ -1,29 +1,183 @@
 {{ template "layout" }}
 {{ define "content" }}
 {{ template "alternate-nav" }}
+  <style>
+    .card-form {
+      width: 420px;
+      max-width: 95%;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 30px rgba(18, 38, 63, 0.08);
+      padding: 20px;
+    }
+
+    .card-form h2 {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
+      color: #0f172a;
+    }
+
+    .field {
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 6px;
+      color: #334155;
+    }
+
+    .input {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid #e6eef8;
+      background: linear-gradient(180deg, #fff, #fbfdff);
+      font-size: 1rem;
+      outline: none;
+      transition: box-shadow .12s ease, border-color .12s ease;
+    }
+
+    .input:focus {
+      box-shadow: 0 6px 20px rgba(14, 165, 233, 0.12);
+      border-color: #0ea5e9;
+    }
+
+    .row {
+      display: flex;
+      gap: 12px;
+    }
+
+    .row .field { flex: 1; }
+
+    .small {
+      width: 110px;
+    }
+
+    .muted { color: #64748b; font-size: 0.88rem; }
+
+    .card-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      color: #0f172a;
+    }
+
+    .brand-dot {
+      width: 36px;
+      height: 24px;
+      border-radius: 6px;
+      display: inline-block;
+      text-align: center;
+      line-height: 24px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: white;
+    }
+
+    .brand-visa { background: linear-gradient(90deg,#1e3a8a,#60a5fa); }
+    .brand-mc   { background: linear-gradient(90deg,#ef4444,#f97316); }
+    .brand-amex { background: linear-gradient(90deg,#059669,#10b981); }
+    .brand-discover { background: linear-gradient(90deg,#f59e0b,#fb923c); }
+    .brand-none  { background: #cbd5e1; color: #0f172a; }
+
+    .error {
+      color: #b91c1c;
+      font-size: 0.85rem;
+      margin-top: 6px;
+    }
+
+    .submit-row {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      background: linear-gradient(180deg,#0ea5e9,#0284c7);
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(2, 132, 199, 0.18);
+    }
+
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .helper {
+      font-size: 0.85rem;
+      color: #475569;
+    }
+  </style>
 <div class="contact-main-container">
     <div class="contact-image-container">
         <img class="contact-image" src="/web/images/{{ .ImageCatName }}.jpeg" alt="a cat picture">
     </div>
     <div class="form-container">
-        <p class="form-header">Inquire</p>
-        <p class="form-sub-text">
-            Send us any questions you have about {{ .CatName }}.
-        </p>
-        <form class="contact-form" action="/api/contact" method="post">
-            <label class="form-label" for="name">Name</label>
-            <br>
-            <input class="form-input text-input" type="text" id="name" name="name" maxlength="40" required>
-            <br>
-            <label class="form-label" for="number">Phone Number</label>
-            <br>
-            <input class="form-input text-input" type="tel" maxlength="14" id="number" name="number" required>
-            <br>
-            <label class="form-label" for="message">Message</label>
-            <br>
-            <textarea class="form-input text-message" id="message" name="message" maxlength="500" required></textarea>
-            <br>
-            <button class="contact-submit-button" type="submit">Send Message</button>
+        <form id="payment-form" class="card-form" novalidate>
+            <h2>Payment details</h2>
+            <div class="field">
+            <label for="cardNumber">Card number</label>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <input id="cardNumber" name="cardNumber" class="input" inputmode="numeric" autocomplete="cc-number" placeholder="4242 4242 4242 4242" aria-describedby="cardNumberHelp" />
+                <div id="brand" class="card-brand" aria-hidden="true">
+                <span id="brandDot" class="brand-dot brand-none">•••</span>
+                </div>
+            </div>
+            <div id="cardNumberError" class="error" aria-live="polite" style="display:none"></div>
+            </div>
+
+            <div class="row">
+            <div class="field small">
+                <label for="exp">Expiration (MM/YY)</label>
+                <input id="exp" name="exp" class="input" inputmode="numeric" autocomplete="cc-exp" placeholder="MM / YY" />
+                <div id="expError" class="error" aria-live="polite" style="display:none"></div>
+            </div>
+
+            <div class="field small">
+                <label for="cvc">Security code (CVC)</label>
+                <input id="cvc" name="cvc" class="input" inputmode="numeric" autocomplete="cc-csc" placeholder="123" />
+                <div id="cvcError" class="error" aria-live="polite" style="display:none"></div>
+            </div>
+            </div>
+
+            <div class="field">
+            <label for="country">Country</label>
+            <select id="country" name="country" class="input" autocomplete="country">
+                <!-- Common list; add more as needed -->
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <option value="GB">United Kingdom</option>
+                <option value="AU">Australia</option>
+                <option value="DE">Germany</option>
+                <option value="FR">France</option>
+                <option value="NL">Netherlands</option>
+                <option value="JP">Japan</option>
+                <option value="IN">India</option>
+                <option value="">Other</option>
+            </select>
+            </div>
+
+            <div class="field">
+            <label for="postal">Postal / ZIP code</label>
+            <input id="postal" name="postal" class="input" inputmode="text" autocomplete="postal-code" placeholder="e.g., 94107 or SW1A 1AA" />
+            <div id="postalError" class="error" aria-live="polite" style="display:none"></div>
+            </div>
+
+            <div class="submit-row">
+            <div class="helper">Secure payment — we don't store card numbers here.</div>
+            <button id="submitBtn" class="btn" type="submit">Pay</button>
+            </div>
         </form>
     </div>
 </div>
