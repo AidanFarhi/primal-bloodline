@@ -62,6 +62,7 @@
         <div class="burger-line"></div>
     </div>
     <div class="right-nav-links">
+        <button class="close-nav-button">X</button>
         <a class="nav-link right-nav-link" href="/kittens">Kittens</a>
         <a class="nav-link right-nav-link" href="/contract">Contract</a>
     </div>
@@ -69,6 +70,7 @@
 <script>
     const rightNavLinksDiv = document.getElementsByClassName('right-nav-links')[0]
     const burgerMenuDiv = document.getElementsByClassName('burger-menu')[0]
+    const closeNavButton = document.getElementsByClassName('close-nav-button')[0]
     burgerMenuDiv.addEventListener('click', () => {
         rightNavLinksDiv.classList.add('open')
     })
@@ -78,5 +80,7 @@
             rightNavLinksDiv.classList.remove('open')
         }
     })
+    document.addEventListener('scroll', () => rightNavLinksDiv.classList.remove('open'))
+    closeNavButton.addEventListener('click', () => rightNavLinksDiv.classList.remove('open'))
 </script>
 {{ end }}
