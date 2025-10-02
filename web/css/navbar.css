@@ -1,4 +1,4 @@
-#top-navbar {
+.navbar {
     position: fixed;
     top: 0;
     height: 16vh;
@@ -10,6 +10,8 @@
     font-family: Amita;
     transition: all 0.2s ease;
     z-index: 100;
+    background-color: black;
+    color: white;
 }
 
 .left-nav-container {
@@ -25,40 +27,42 @@
     border-radius: 50%;
 }
 
-#top-navbar.top {
+/* -----------------  main-navbar scroll styling ------------------- */
+#main-navbar.top {
     background: transparent;
     color: rgb(255, 255, 255);
 }
 
-#top-navbar.middle {
+#main-navbar.middle {
     background-color: rgb(45, 45, 45, 0.7);
     color: white;
     backdrop-filter: blur(10px);
 }
 
-#top-navbar.middle .site-title {
+#main-navbar.middle .site-title {
     fill: white;
 }
 
-#top-navbar.middle-bottom {
+#main-navbar.middle-bottom {
     background-color: rgb(255, 255, 255);
     color: black;
 }
 
-#top-navbar.middle-bottom .site-title {
+#main-navbar.middle-bottom .site-title {
     fill: black;
 }
 
-#top-navbar.bottom {
+#main-navbar.bottom {
     background-color: black;
     color: rgb(255, 255, 255);
 }
 
-#top-navbar.bottom .site-title {
+#main-navbar.bottom .site-title {
     fill: white;
 }
+/* ---------------------------------------------- */
 
-#left-nav-link {
+.left-nav-link {
     margin-left: 1rem;
 }
 

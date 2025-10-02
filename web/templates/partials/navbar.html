@@ -1,10 +1,9 @@
-{{ define "main-nav" }}
-<nav class="top" id="top-navbar">
+{{ define "navbar" }}
+<nav class="navbar top" id="{{ .NavbarID }}"> <!-- main-navbar or alternate-navbar -->
     <div class="left-nav-container">
         <img class="left-icon" src="/web/images/don_don_art.jpg" alt="don-don">
-        <a id="left-nav-link" class="nav-link" href="/">
-            <svg
-                class="site-title"
+        <a id="left-nav-link" class="nav-link left-nav-link" href="/">
+            <svg class="site-title"
                 viewBox="0 0 1800.0001 300"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:svg="http://www.w3.org/2000/svg">
@@ -67,20 +66,4 @@
         <a class="nav-link right-nav-link" href="/contract">Contract</a>
     </div>
 </nav>
-<script>
-    const rightNavLinksDiv = document.getElementsByClassName('right-nav-links')[0]
-    const burgerMenuDiv = document.getElementsByClassName('burger-menu')[0]
-    const closeNavButton = document.getElementsByClassName('close-nav-button')[0]
-    burgerMenuDiv.addEventListener('click', () => {
-        rightNavLinksDiv.classList.add('open')
-    })
-    document.addEventListener('click', event => {
-        if (event.target !== rightNavLinksDiv && !rightNavLinksDiv.contains(event.target) && 
-            event.target !== burgerMenuDiv && !burgerMenuDiv.contains(event.target)) {
-            rightNavLinksDiv.classList.remove('open')
-        }
-    })
-    document.addEventListener('scroll', () => rightNavLinksDiv.classList.remove('open'))
-    closeNavButton.addEventListener('click', () => rightNavLinksDiv.classList.remove('open'))
-</script>
 {{ end }}

@@ -1,4 +1,4 @@
-const navBar = document.getElementById('top-navbar')
+const navBar = document.getElementsByClassName('navbar')[0]
 const missionHeader = document.getElementById('mission-header')
 const missionContent = document.getElementById('mission-content')
 const catDiv = document.getElementById('cat-section')
@@ -32,25 +32,25 @@ window.addEventListener('scroll', () => {
     const middleDetected = middleDivs.some(div => touching(navBar, div))                // pause, no Diddy
     const middleBottomDetected = middleBottomDivs.some(div => touching(navBar, div))    // pause, no Diddy
     let bottomDetected = touching(navBar, contactDiv)                                   // pause, no Diddy
-    if (bottomDetected) {
+    if (bottomDetected && navBar.id === 'main-navbar') {
         burgerLines.forEach(e => e.classList.remove('middle-bottom'))
         navBar.classList.remove('top')
         navBar.classList.remove('middle')
         navBar.classList.remove('middle-bottom')
         navBar.classList.add('bottom')
-    } else if (middleBottomDetected) {
+    } else if (middleBottomDetected && navBar.id === 'main-navbar') {
         burgerLines.forEach(e => e.classList.add('middle-bottom'))
         navBar.classList.remove('top')
         navBar.classList.remove('middle')
         navBar.classList.remove('bottom')
         navBar.classList.add('middle-bottom')
-    } else if (middleDetected) {
+    } else if (middleDetected && navBar.id === 'main-navbar') {
         burgerLines.forEach(e => e.classList.remove('middle-bottom'))
         navBar.classList.remove('top')
         navBar.classList.remove('bottom')
         navBar.classList.remove('middle-bottom')
         navBar.classList.add('middle')
-    } else {
+    } else if (navBar.id === 'main-navbar'){
         burgerLines.forEach(e => e.classList.remove('middle-bottom'))
         navBar.classList.remove('bottom')
         navBar.classList.remove('middle')

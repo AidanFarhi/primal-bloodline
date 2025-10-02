@@ -9,6 +9,17 @@ import (
 	"strings"
 )
 
+type PageData struct {
+	NavbarID     string
+	ImageCatName string
+	CatName      string
+}
+
+const (
+	mainNavbarID      = "main-navbar"
+	alternateNavbarID = "alternate-navbar"
+)
+
 // Helper function to extract cat name from URL path
 func ExtractCatNameFromPath(urlPath, prefix string) string {
 	catName := strings.TrimPrefix(urlPath, prefix)
@@ -18,34 +29,49 @@ func ExtractCatNameFromPath(urlPath, prefix string) string {
 
 // GET /
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
+	pageData := PageData{
+		NavbarID:     mainNavbarID,
+		ImageCatName: "",
+		CatName:      "",
+	}
 	t, _ := template.ParseFiles(
 		"web/templates/layout.html",
-		"web/templates/partials/main-nav.html",
-		"web/templates/index.html",
+		"web/templates/partials/navbar.html",
+		"web/templates/pages/index.html",
 	)
-	t.Execute(w, nil)
+	t.Execute(w, pageData)
 }
 
 // GET /kittens
 func KittensHandler(w http.ResponseWriter, r *http.Request) {
+	pageData := PageData{
+		NavbarID:     alternateNavbarID,
+		ImageCatName: "",
+		CatName:      "",
+	}
 	t, _ := template.ParseFiles(
 		"web/templates/layout.html",
-		"web/templates/partials/alternate-nav.html",
-		"web/templates/kittens.html",
+		"web/templates/partials/navbar.html",
+		"web/templates/pages/kittens.html",
 	)
-	t.Execute(w, nil)
+	t.Execute(w, pageData)
 }
 
 // GET /cat-details/{catName}
 func CatDetailsHandler(w http.ResponseWriter, r *http.Request) {
+	pageData := PageData{
+		NavbarID:     alternateNavbarID,
+		ImageCatName: "",
+		CatName:      "",
+	}
 	catName := ExtractCatNameFromPath(r.URL.Path, "/cat-details/")
-	templatePath := fmt.Sprintf("web/templates/%s.html", catName)
+	templatePath := fmt.Sprintf("web/templates/pages/%s.html", catName)
 	t, _ := template.ParseFiles(
 		"web/templates/layout.html",
 		templatePath,
-		"web/templates/partials/alternate-nav.html",
+		"web/templates/partials/navbar.html",
 	)
-	t.Execute(w, nil)
+	t.Execute(w, pageData)
 }
 
 // GET /inquire/{catName}
@@ -53,14 +79,15 @@ func InquireHandler(w http.ResponseWriter, r *http.Request) {
 	catName := strings.TrimPrefix(r.URL.Path, "/inquire/")
 	catName = path.Clean(catName)
 	titleCatName := strings.ToUpper(catName[0:1]) + catName[1:]
-	pageData := map[string]string{
-		"ImageCatName": catName,
-		"CatName":      titleCatName,
+	pageData := PageData{
+		NavbarID:     alternateNavbarID,
+		ImageCatName: catName,
+		CatName:      titleCatName,
 	}
 	t, _ := template.ParseFiles(
 		"web/templates/layout.html",
-		"web/templates/partials/alternate-nav.html",
-		"web/templates/inquire.html",
+		"web/templates/partials/navbar.html",
+		"web/templates/pages/inquire.html",
 	)
 	t.Execute(w, pageData)
 }
