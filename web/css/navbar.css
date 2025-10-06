@@ -1,3 +1,6 @@
+/* =========================
+   Base Styles (default)
+============================ */
 .navbar {
     position: fixed;
     top: 0;
@@ -22,12 +25,21 @@
 }
 
 .left-icon {
-    height: 5rem;
-    width: 5rem;
+    height: 2.75rem;
+    width: 2.75rem;
     border-radius: 50%;
 }
 
-/* -----------------  main-navbar scroll styling ------------------- */
+.left-nav-link {
+    margin-left: 1rem;
+}
+
+.site-title {
+    width: 8rem;
+    fill: white;
+    margin-top: 1rem;
+}
+
 #main-navbar.top {
     background: transparent;
     color: rgb(255, 255, 255);
@@ -60,24 +72,13 @@
 #main-navbar.bottom .site-title {
     fill: white;
 }
-/* ---------------------------------------------- */
-
-.left-nav-link {
-    margin-left: 1rem;
-}
-
-.site-title {
-    width: 22.5rem;
-    fill: white;
-    margin-top: 0.75rem;
-}
 
 .right-nav-links {
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
-    width: 15vw;
+    width: 40vw;
     display: flex;
     padding-top: 3rem;
     flex-direction: column;
@@ -93,13 +94,13 @@
     left: 1rem;
     background: transparent;
     border: none;
-    font-size: 1.25rem;
+    font-size: 0.75rem;
     color: white;
     cursor: pointer;
 }
 
 .nav-link {
-    font-size: 1.25rem;
+    font-size: 0.75rem;
     padding-bottom: 1rem;
     color: white;
 }
@@ -115,17 +116,103 @@
 }
 
 .burger-menu {
-    margin-right: 5rem;
+    margin-right: 2rem;
     cursor: pointer;
 }
 
 .burger-line {
-    width: 2.5rem;
-    height: 0.2rem;
+    width: 1.575rem;
+    height: 0.09rem;
     background-color: white;
     margin-bottom: 0.5rem;
 }
 
 .burger-line.middle-bottom {
     background-color: black;
+}
+
+/* =========================
+   Smallest phones (≥320px)
+   ========================= */
+@media (min-width: 320px) {
+}
+
+/* =========================
+   Small devices (≥480px)
+   ========================= */
+@media (min-width: 480px) {
+}
+
+/* =========================
+   Tablets (≥768px)
+   ========================= */
+@media (min-width: 768px) {
+}
+
+/* =========================
+   Small desktops (≥992px)
+   ========================= */
+@media (min-width: 992px) {
+}
+
+/* =========================
+   Large desktops (≥1200px)
+   ========================= */
+@media (min-width: 1200px) {
+    .left-icon {
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+    }
+
+    .site-title {
+        display: block;
+        width: 22.5rem;
+        fill: white;
+        margin-top: 0.75rem;
+    }
+
+    .close-nav-button {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        background: transparent;
+        border: none;
+        font-size: 1.25rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    .nav-link {
+        font-size: 1.25rem;
+        padding-bottom: 1rem;
+        color: white;
+    }
+
+    .right-nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 15vw;
+        display: flex;
+        padding-top: 3rem;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(21, 21, 21);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .burger-menu {
+        margin-right: 5rem;
+        cursor: pointer;
+    }
+
+    .burger-line {
+        width: 2.5rem;
+        height: 0.2rem;
+        background-color: white;
+        margin-bottom: 0.5rem;
+    }
 }

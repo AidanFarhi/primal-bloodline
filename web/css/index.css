@@ -1,4 +1,6 @@
-/*--- remove default styling ---*/
+/* =========================
+   Base Styles (default)
+============================ */
 body {
     margin: 0;
     padding: 0;
@@ -14,18 +16,9 @@ a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
 }
-/*-----------------------------*/
-
-/* @font-face {
-    font-family: 'PBLFont';
-    src: url('/web/fonts/pbl.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-} */
 
 #hero-section {
     background-image: url("/web/images/don_don_bw_glowing_v2.png");
-    /* background-image: url("/web/images/don_don_art.jpg"); */
     background-size: cover;
     background-position: center;
     height: 185vh;
@@ -52,10 +45,10 @@ a, a:hover, a:focus, a:active {
     color: black;
     font-family: Amita;
     /* font-family: 'PBLFont'; */
-    letter-spacing: 1px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .header-container {
@@ -66,29 +59,29 @@ a, a:hover, a:focus, a:active {
 }
 
 .section-header {
-    margin-top: 8rem;
-    font-size: 32px;
+    /* margin-top: 8rem; */
+    font-size: 24px;
 }
 
 .content-container {
     height: 55vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    padding-left: 15vw;
-    padding-right: 15vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
 }
 
 .section-image-large {
-    height: 15rem;
-    width: 15rem;
+    height: 10rem;
+    width: 10rem;
     border-radius: 50%;
-    padding: 7rem;
+    padding: 3rem;
 }
 
 .section-text {
-    font-size: 18px;
-    padding: 7rem;
+    font-size: 14px;
+    padding: 1rem;
 }
 
 .image-button-container {
@@ -114,10 +107,10 @@ a, a:hover, a:focus, a:active {
 }
 
 .section-image-small {
-    height: 13rem;
-    width: 13rem;
+    height: 10rem;
+    width: 10rem;
     border-radius: 50%;
-    padding: 7rem;
+    padding: 3rem;
 }
 
 #mission-section {
@@ -131,4 +124,74 @@ a, a:hover, a:focus, a:active {
 #contact-section {
     color: rgb(255, 255, 255);
     background-color: black;
+}
+
+
+/* @font-face {
+    font-family: 'PBLFont';
+    src: url('/web/fonts/pbl.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+/* =========================
+   Smallest phones (≥320px)
+============================ */
+@media (min-width: 320px) {
+}
+
+/* =========================
+   Small devices (≥480px)
+============================ */
+@media (min-width: 480px) {
+}
+
+/* =========================
+   Tablets (≥768px)
+============================ */
+@media (min-width: 768px) {
+}
+
+/* =========================
+   Small desktops (≥992px)
+============================ */
+@media (min-width: 992px) {
+}
+
+/* =========================
+   Large desktops (≥1200px)
+============================ */
+@media (min-width: 1200px) {
+    .section-image-large {
+        height: 15rem;
+        width: 15rem;
+        border-radius: 50%;
+        padding: 7rem;
+    }
+
+    .content-container {
+        height: 55vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 15vw;
+        padding-right: 15vw;
+    }
+
+    .section-header {
+        margin-top: 8rem;
+        font-size: 32px;
+    }
+
+    .section-text {
+        font-size: 18px;
+        padding: 7rem;
+    }
+
+    .section-image-small {
+        height: 13rem;
+        width: 13rem;
+        border-radius: 50%;
+        padding: 7rem;
+    }
 }
