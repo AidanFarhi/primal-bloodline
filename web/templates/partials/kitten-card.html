@@ -1,0 +1,12 @@
+{{ define "kitten-card" }}
+<div class="kitten-card">
+    <img class="kitten-card-image" src="/web/images/{{ .CatReferenceName }}/main.jpeg" alt="">
+    <div class="kitten-card-sub-div">
+        <h3 class="kitten-card-name">{{ .CatTitleName }}</h3>
+        <p>.</p>
+        <p class="kitten-card-price">{{ .Price }}</p>
+    </div>
+    <p class="kitten-card-description">{{ .Description }}</p>
+    <a class="kitten-link" href="/cat-details/{{ .CatReferenceName }}">Details</a>
+</div>
+{{ end }}

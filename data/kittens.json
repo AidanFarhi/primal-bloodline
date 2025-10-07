@@ -1,0 +1,42 @@
+[
+    {
+        "catReferenceName": "kuma",
+        "catTitleName": "Kuma",
+        "price": "$4,000",
+        "description": "'Kuma' means bear in Japanese.",
+        "dob": "2025-07-19",
+        "litter": "Beta",
+        "age": "2 Months",
+        "color": "Grey/Orange"
+    },
+    {
+        "catReferenceName": "kuro",
+        "catTitleName": "Kuro",
+        "price": "$4,000",
+        "description": "'Kuro' means black in Japanese.",
+        "dob": "2025-07-19",
+        "litter": "Beta",
+        "age": "2 Months",
+        "color": "Grey/Orange"
+    },
+    {
+        "catReferenceName": "umi",
+        "catTitleName": "Umi",
+        "price": "$4,000",
+        "description": "'Umi' means ocean in Japanese.",
+        "dob": "2025-07-19",
+        "litter": "Beta",
+        "age": "2 Months",
+        "color": "Grey/Orange"
+    },
+    {
+        "catReferenceName": "yume",
+        "catTitleName": "Yume",
+        "price": "$4,000",
+        "description": "'Yume' means dream in Japanese.",
+        "dob": "2025-07-19",
+        "litter": "Beta",
+        "age": "2 Months",
+        "color": "Grey/Orange"
+    }
+]

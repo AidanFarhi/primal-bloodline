@@ -6,6 +6,8 @@ import (
 	"net/http"
 	"net/url"
 	"primalbl/config"
+	"primalbl/model"
+	"primalbl/repo"
 )
 
 type ContactService struct {
@@ -34,4 +36,22 @@ func (cs ContactService) SendMessage(name, number, message string) error {
 	}
 	fmt.Println(responseData)
 	return nil
+}
+
+type CatService struct {
+	CatRepository repo.CatRepository
+}
+
+func NewCatService(cr repo.CatRepository) CatService {
+	return CatService{
+		CatRepository: cr,
+	}
+}
+
+func (cs CatService) GetAllCats() []model.Kitten {
+	return cs.CatRepository.GetAllCats()
+}
+
+func (cs CatService) GetCatByReferenceName(catReferenceName string) model.Kitten {
+	return cs.CatRepository.GetCatByReferenceName(catReferenceName)
 }

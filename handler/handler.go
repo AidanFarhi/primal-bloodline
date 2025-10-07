@@ -1,19 +1,13 @@
 package handler
 
 import (
-	"fmt"
 	"html/template"
 	"net/http"
 	"path"
+	"primalbl/model"
 	"primalbl/service"
 	"strings"
 )
-
-type PageData struct {
-	NavbarID     string
-	ImageCatName string
-	CatName      string
-}
 
 const (
 	mainNavbarID      = "main-navbar"
@@ -29,10 +23,11 @@ func ExtractCatNameFromPath(urlPath, prefix string) string {
 
 // GET /
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
-	pageData := PageData{
+	pageData := model.PageData{
 		NavbarID:     mainNavbarID,
 		ImageCatName: "",
 		CatName:      "",
+		Cats:         []model.Kitten{},
 	}
 	t, _ := template.ParseFiles(
 		"web/templates/layout.html",
@@ -43,35 +38,46 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 // GET /kittens
-func KittensHandler(w http.ResponseWriter, r *http.Request) {
-	pageData := PageData{
-		NavbarID:     alternateNavbarID,
-		ImageCatName: "",
-		CatName:      "",
+func NewKittensHandler(cs service.CatService) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		kittens := cs.GetAllCats()
+		pageData := model.PageData{
+			NavbarID:     alternateNavbarID,
+			ImageCatName: "",
+			CatName:      "",
+			Cats:         kittens,
+		}
+		t, _ := template.ParseFiles(
+			"web/templates/layout.html",
+			"web/templates/partials/navbar.html",
+			"web/templates/pages/kittens.html",
+			"web/templates/partials/kitten-card.html",
+		)
+		t.Execute(w, pageData)
 	}
-	t, _ := template.ParseFiles(
-		"web/templates/layout.html",
-		"web/templates/partials/navbar.html",
-		"web/templates/pages/kittens.html",
-	)
-	t.Execute(w, pageData)
 }
 
 // GET /cat-details/{catName}
-func CatDetailsHandler(w http.ResponseWriter, r *http.Request) {
-	pageData := PageData{
-		NavbarID:     alternateNavbarID,
-		ImageCatName: "",
-		CatName:      "",
+func NewCatDetailsHandler(cs service.CatService) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		catName := ExtractCatNameFromPath(r.URL.Path, "/cat-details/")
+		kittens := []model.Kitten{}
+		kitten := cs.GetCatByReferenceName(catName)
+		kittens = append(kittens, kitten)
+		pageData := model.PageData{
+			NavbarID:     alternateNavbarID,
+			ImageCatName: "",
+			CatName:      "",
+			Cats:         kittens,
+		}
+		t, _ := template.ParseFiles(
+			"web/templates/layout.html",
+			"web/templates/pages/kitten-details.html",
+			"web/templates/partials/navbar.html",
+			"web/templates/partials/kitten-detail.html",
+		)
+		t.Execute(w, pageData)
 	}
-	catName := ExtractCatNameFromPath(r.URL.Path, "/cat-details/")
-	templatePath := fmt.Sprintf("web/templates/pages/%s.html", catName)
-	t, _ := template.ParseFiles(
-		"web/templates/layout.html",
-		templatePath,
-		"web/templates/partials/navbar.html",
-	)
-	t.Execute(w, pageData)
 }
 
 // GET /inquire/{catName}
@@ -79,10 +85,11 @@ func InquireHandler(w http.ResponseWriter, r *http.Request) {
 	catName := strings.TrimPrefix(r.URL.Path, "/inquire/")
 	catName = path.Clean(catName)
 	titleCatName := strings.ToUpper(catName[0:1]) + catName[1:]
-	pageData := PageData{
+	pageData := model.PageData{
 		NavbarID:     alternateNavbarID,
 		ImageCatName: catName,
 		CatName:      titleCatName,
+		Cats:         []model.Kitten{},
 	}
 	t, _ := template.ParseFiles(
 		"web/templates/layout.html",

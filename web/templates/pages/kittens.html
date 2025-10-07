@@ -2,45 +2,8 @@
 {{ define "content" }}
 {{ template "navbar" . }}
 <div id="kittens-main-container">
-    <div class="kitten-card">
-        <img class="kitten-card-image" src="/web/images/kuma/main.jpeg" alt="">
-        <div class="kitten-card-sub-div">
-            <h3 class="kitten-card-name">Kuma</h3>
-            <p>.</p>
-            <p class="kitten-card-price">$4,000</p>
-        </div>
-        <p class="kitten-card-description">'Kuma' means bear in Japanese.</p>
-        <a class="kitten-link" href="/cat-details/kuma">Details</a>
-    </div>
-    <div class="kitten-card">
-        <img class="kitten-card-image" src="/web/images/kuro/main.jpeg" alt="">
-        <div class="kitten-card-sub-div">
-            <h3 class="kitten-card-name">Kuro</h3>
-            <p>.</p>
-            <p class="kitten-card-price">$4,000</p>
-        </div>
-        <p class="kitten-card-description">'Kuro' means black in Japanese.</p>
-        <a class="kitten-link" href="/cat-details/kuro">Details</a>
-    </div>
-        <div class="kitten-card">
-        <img class="kitten-card-image" src="/web/images/umi/main.jpeg" alt="">
-        <div class="kitten-card-sub-div">
-            <h3 class="kitten-card-name">Umi</h3>
-            <p>.</p>
-            <p class="kitten-card-price">$4,000</p>
-        </div>
-        <p class="kitten-card-description">'Umi' means ocean in Japanese.</p>
-        <a class="kitten-link" href="/cat-details/umi">Details</a>
-    </div>
-    <div class="kitten-card">
-        <img class="kitten-card-image" src="/web/images/yume/main.jpeg" alt="">
-        <div class="kitten-card-sub-div">
-            <h3 class="kitten-card-name">Yume</h3>
-            <p>.</p>
-            <p class="kitten-card-price">$4,000</p>
-        </div>
-        <p class="kitten-card-description">'Yume' means dream in Japanese.</p>
-        <a class="kitten-link" href="/cat-details/yume">Details</a>
-    </div>
+    {{ range .Cats }}
+        {{ template "kitten-card" . }}
+    {{ end }}
 </div>
 {{ end }}
