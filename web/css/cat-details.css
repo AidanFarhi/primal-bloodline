@@ -1,18 +1,21 @@
+/* =========================
+   Base Styles (default)
+============================ */
 .cat-details-container {
     font-family: Amita;
     margin-top: 15vh;
     height: 85vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .cat-details-image {
-    height: 40rem;
-    width: 40rem;
+    height: 10rem;
+    width: 10rem;
     border-radius: 10px;
-    margin-right: 3rem;
 }
 
 .cat-details-text {
@@ -20,6 +23,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .cat-name {
@@ -48,10 +53,8 @@
     background-color: black;
     color: rgb(255, 255, 255);
     text-align: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding: 8px;
     border-radius: 5px;
-    margin-right: 10rem;
     cursor: pointer;
     margin-top: 1rem;
 }
@@ -59,4 +62,56 @@
 .cat-details-link:hover {
     background-color: rgba(0, 0, 0, 0.408);
     transition: all 0.15s ease;
+}
+
+/* =========================
+   Smallest phones (≥320px)
+============================ */
+@media (min-width: 320px) {
+}
+
+/* =========================
+   Small devices (≥480px)
+============================ */
+@media (min-width: 480px) {
+}
+
+/* =========================
+   Tablets (≥768px)
+============================ */
+@media (min-width: 768px) {
+}
+
+/* =========================
+   Small desktops (≥992px)
+============================ */
+@media (min-width: 992px) {
+}
+
+/* =========================
+   Large desktops (≥1200px)
+============================ */
+@media (min-width: 1200px) {
+    .cat-details-container {
+        flex-direction: row;
+    }
+
+    .cat-details-image {
+        height: 40rem;
+        width: 40rem;
+        margin-right: 3rem;
+    }
+
+    .cat-details-text {
+        align-items: baseline;
+    }
+
+    .cat-details-link {
+        text-align: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 5px;
+        margin-right: 10rem;
+        margin-top: 1rem;
+    }
 }
