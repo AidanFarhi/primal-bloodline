@@ -44,7 +44,6 @@ a, a:hover, a:focus, a:active {
 }
 
 .section-header {
-    /* margin-top: 8rem; */
     font-size: 24px;
 }
 
@@ -114,7 +113,7 @@ a, a:hover, a:focus, a:active {
 
 /* @font-face {
     font-family: 'PBLFont';
-    src: url('/web/fonts/pbl.ttf') format('truetype');
+    src: url('/web/fonts/Primal_Bloodline.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 } */
