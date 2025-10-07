@@ -63,20 +63,4 @@
         </form>
     </div>
 </div>
-<!-- <script>
-    document.getElementById('number').addEventListener('input', function (e) {
-        let value = e.target.value.replace(/\D/g, ''); // strip non-digits
-        if (value.length > 6) {
-            // Format: (XXX) XXX-XXXX
-            value = value.replace(/(\d{3})(\d{3})(\d{0,4}).*/, '($1) $2-$3');
-        } else if (value.length > 3) {
-            // Format: (XXX) XXX
-            value = value.replace(/(\d{3})(\d{0,3})/, '($1) $2');
-        } else if (value.length > 0) {
-            // Start adding the opening (
-            value = value.replace(/(\d{0,3})/, '($1');
-        }
-        e.target.value = value;
-    });
-</script> -->
 {{ end }}

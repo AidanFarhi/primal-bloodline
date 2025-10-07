@@ -20,5 +20,5 @@ func (c *Config) Load() {
 	c.PrimalBloodlinePhoneNumber = os.Getenv("PHONE_NUMBER")
 	c.Port, _ = strconv.Atoi(os.Getenv("PORT"))
 	c.Develop, _ = strconv.ParseBool(os.Getenv("DEVELOP"))
-	c.JSONPath = "./data/kittens.json"
+	c.JSONPath = os.Getenv("JSON_PATH")
 }
