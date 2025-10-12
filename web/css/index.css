@@ -17,15 +17,8 @@ a, a:hover, a:focus, a:active {
     color: inherit;
 }
 
-#hero-section {
-    background-image: url("/web/images/don_don_bw_glowing_gradient.png");
-    background-size: cover;
-    background-position: center;
-    height: 185vh;
-}
-
 .home-section {
-    height: 85vh;
+    height: 90.01vh;
     background-color: rgb(255, 255, 255);
     color: black;
     font-family: Amita;
@@ -36,11 +29,29 @@ a, a:hover, a:focus, a:active {
     text-align: center;
 }
 
+#hero-section {
+    background-image: url("/web/images/don_don_bw_glowing_gradient.png");
+    background-size: cover;
+    background-position: center;
+    height: 200vh;
+}
+
+#mission-section {
+    margin-top: 100vh;
+    background-color: transparent;
+    color: rgb(239, 239, 239);
+    width: 100%;
+}
+
+#mission-header {
+    padding-top: 26vh;
+}
+
 .header-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20vh;
+    padding-top: 8vh;
 }
 
 .section-header {
@@ -48,7 +59,6 @@ a, a:hover, a:focus, a:active {
 }
 
 .content-container {
-    height: 55vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,12 +70,12 @@ a, a:hover, a:focus, a:active {
     height: 10rem;
     width: 10rem;
     border-radius: 50%;
-    padding: 3rem;
+    margin-top: 2rem;
 }
 
 .section-text {
+    padding-top: 2rem;
     font-size: 14px;
-    padding: 1rem;
 }
 
 .image-button-container {
@@ -83,6 +93,7 @@ a, a:hover, a:focus, a:active {
     padding-top: 8px;
     padding-bottom: 8px;
     border-radius: 5px;
+    margin-top: 2rem;
 }
 
 .section-link:hover {
@@ -94,22 +105,13 @@ a, a:hover, a:focus, a:active {
     height: 10rem;
     width: 10rem;
     border-radius: 50%;
-    padding: 3rem;
-}
-
-#mission-section {
-    margin-top: 100vh;
-    background-color: transparent;
-    color: rgb(239, 239, 239);
-    width: 100%;
-    height: 90vh;
+    margin-top: 2rem;
 }
 
 #contact-section {
     color: rgb(255, 255, 255);
     background-color: black;
 }
-
 
 /* @font-face {
     font-family: 'PBLFont';

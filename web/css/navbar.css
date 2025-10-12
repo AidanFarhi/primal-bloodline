@@ -4,7 +4,7 @@
 .navbar {
     position: fixed;
     top: 0;
-    height: 16vh;
+    height: 10vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -18,26 +18,22 @@
 }
 
 .left-nav-container {
-    margin-left: 2rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-}
-
-.left-icon {
-    height: 2.75rem;
-    width: 2.75rem;
-    border-radius: 50%;
-}
-
-.left-nav-link {
     margin-left: 1rem;
 }
 
+.left-icon {
+    height: 2rem;
+    width: 2rem;
+    margin-top: 0.25rem;
+    border-radius: 50%;
+}
+
 .site-title {
-    width: 8rem;
+    width: 6rem;
     fill: white;
-    margin-top: 1rem;
 }
 
 #main-navbar.top {
@@ -121,7 +117,7 @@
 }
 
 .burger-line {
-    width: 1.575rem;
+    width: 1.4175rem;
     height: 0.09rem;
     background-color: white;
     margin-bottom: 0.5rem;
