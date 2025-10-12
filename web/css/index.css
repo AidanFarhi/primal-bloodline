@@ -64,6 +64,7 @@ a, a:hover, a:focus, a:active {
     align-items: center;
     padding-left: 3vw;
     padding-right: 3vw;
+    height: 100%;
 }
 
 .section-image-large {
@@ -152,32 +153,26 @@ a, a:hover, a:focus, a:active {
         height: 15rem;
         width: 15rem;
         border-radius: 50%;
-        padding: 7rem;
     }
 
     .content-container {
-        height: 55vh;
-        display: flex;
         flex-direction: row;
         align-items: center;
-        padding-left: 15vw;
-        padding-right: 15vw;
+        padding-left: 20vw;
+        padding-right: 20vw;
     }
 
     .section-header {
-        margin-top: 8rem;
         font-size: 32px;
     }
 
     .section-text {
         font-size: 18px;
-        padding: 7rem;
     }
 
     .section-image-small {
         height: 13rem;
         width: 13rem;
         border-radius: 50%;
-        padding: 7rem;
     }
 }

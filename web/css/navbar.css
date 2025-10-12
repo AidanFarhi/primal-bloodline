@@ -155,17 +155,20 @@
    Large desktops (≥1200px)
    ========================= */
 @media (min-width: 1200px) {
+    .left-nav-container {
+        margin-left: 2rem;
+    }
+
     .left-icon {
-        height: 5rem;
-        width: 5rem;
+        height: 3rem;
+        width: 3rem;
         border-radius: 50%;
     }
 
     .site-title {
         display: block;
-        width: 22.5rem;
+        width: 10rem;
         fill: white;
-        margin-top: 0.75rem;
     }
 
     .close-nav-button {
