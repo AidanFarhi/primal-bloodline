@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
+    background-color: black;
 }
 
 p {
@@ -17,15 +18,8 @@ a, a:hover, a:focus, a:active {
     color: inherit;
 }
 
-#hero-section {
-    background-image: url("/web/images/don_don_bw_glowing_gradient.png");
-    background-size: cover;
-    background-position: center;
-    height: 185vh;
-}
-
 .home-section {
-    height: 85vh;
+    height: 90.025vh;
     background-color: rgb(255, 255, 255);
     color: black;
     font-family: Amita;
@@ -36,11 +30,29 @@ a, a:hover, a:focus, a:active {
     text-align: center;
 }
 
+#hero-section {
+    background-image: url("/web/images/don_don_bw_glowing_gradient.png");
+    background-size: cover;
+    background-position: center;
+    height: 200vh;
+}
+
+#mission-section {
+    margin-top: 100vh;
+    background-color: transparent;
+    color: rgb(239, 239, 239);
+    width: 100%;
+}
+
+#mission-header {
+    padding-top: 26vh;
+}
+
 .header-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20vh;
+    padding-top: 8vh;
 }
 
 .section-header {
@@ -48,24 +60,24 @@ a, a:hover, a:focus, a:active {
 }
 
 .content-container {
-    height: 55vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-left: 3vw;
     padding-right: 3vw;
+    height: 100%;
 }
 
 .section-image-large {
     height: 10rem;
     width: 10rem;
-    border-radius: 50%;
-    padding: 3rem;
+    border-radius: 8px;
+    margin-top: 2rem;
 }
 
 .section-text {
+    padding-top: 2rem;
     font-size: 14px;
-    padding: 1rem;
 }
 
 .image-button-container {
@@ -83,6 +95,7 @@ a, a:hover, a:focus, a:active {
     padding-top: 8px;
     padding-bottom: 8px;
     border-radius: 5px;
+    margin-top: 2rem;
 }
 
 .section-link:hover {
@@ -93,23 +106,14 @@ a, a:hover, a:focus, a:active {
 .section-image-small {
     height: 10rem;
     width: 10rem;
-    border-radius: 50%;
-    padding: 3rem;
-}
-
-#mission-section {
-    margin-top: 100vh;
-    background-color: transparent;
-    color: rgb(239, 239, 239);
-    width: 100%;
-    height: 90vh;
+    border-radius: 8px;
+    margin-top: 2rem;
 }
 
 #contact-section {
     color: rgb(255, 255, 255);
     background-color: black;
 }
-
 
 /* @font-face {
     font-family: 'PBLFont';
@@ -147,35 +151,27 @@ a, a:hover, a:focus, a:active {
 ============================ */
 @media (min-width: 1200px) {
     .section-image-large {
-        height: 15rem;
-        width: 15rem;
-        border-radius: 50%;
-        padding: 7rem;
+        height: 25rem;
+        width: 25rem;
     }
 
     .content-container {
-        height: 55vh;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        /* flex-direction: row;
+        align-items: center; */
         padding-left: 15vw;
         padding-right: 15vw;
     }
 
     .section-header {
-        margin-top: 8rem;
         font-size: 32px;
     }
 
     .section-text {
         font-size: 18px;
-        padding: 7rem;
     }
 
     .section-image-small {
         height: 13rem;
         width: 13rem;
-        border-radius: 50%;
-        padding: 7rem;
     }
 }

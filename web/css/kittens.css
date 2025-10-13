@@ -2,8 +2,9 @@
    Base Styles (default)
 ============================ */
 #kittens-main-container {
-    margin-top: 8vh;
-    height: 92vh;
+    background-color: white;
+    margin-top: 10vh;
+    height: 90vh;
     width: 100vw;
     font-family: Amita;
     display: flex;
@@ -13,10 +14,11 @@
 }
 
 .kitten-card {
-    border-top-left-radius: 50%;
+    /* border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-right-radius: 20px; */
+    border-radius: 8px;
     width: 26rem;
     margin: 4.5rem;
     display: flex;
@@ -26,8 +28,9 @@
 }
 
 .kitten-card-image {
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
+    /* border-top-left-radius: 50%;
+    border-top-right-radius: 50%; */
+    border-radius: 8px;
     width: 100%;
     cursor: pointer;
     opacity: 0.85;
@@ -106,8 +109,8 @@
 ============================ */
 @media (min-width: 1200px) {
     #kittens-main-container {
-        height: 88vh;
-        margin-top: 12vh;
+        height: 90vh;
+        margin-top: 10vh;
     }
 
     .kitten-card {

@@ -2,10 +2,10 @@
    Base Styles (default)
 ============================ */
 .contact-main-container {
+    background-color: white;
     font-family: Amita;
-    margin-top: 32vh;
-    margin-bottom: 18vh;
-    height: 85vh;
+    margin-top: 10vh;
+    height: 90vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -14,14 +14,14 @@
 }
 
 .contact-image-container > .contact-image {
-    height: 10rem;
-    width: 10rem;
-    border-radius: 10px;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 8px;
 }
 
 .form-container {
     width: 18rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .form-header {
@@ -65,78 +65,78 @@
 
 /* credit card form */
 .card-form {
-    width: 420px;
+    width: 336px;
     max-width: 95%;
     margin: 0 auto;
     background: white;
-    border-radius: 12px;
-    box-shadow: 0 6px 30px rgba(18, 38, 63, 0.08);
-    padding: 20px;
+    border-radius: 9.6px;
+    box-shadow: 0 4.8px 24px rgba(18, 38, 63, 0.08);
+    padding: 16px;
 }
 
 .card-form h2 {
-    margin: 0 0 12px;
-    font-size: 1.25rem;
+    margin: 0 0 9.6px;
+    font-size: 1rem;
     color: #0f172a;
 }
 
 .field {
-    margin-bottom: 12px;
+    margin-bottom: 9.6px;
 }
 
 label {
     display: block;
-    font-size: 0.85rem;
-    margin-bottom: 6px;
+    font-size: 0.68rem;
+    margin-bottom: 4.8px;
     color: #334155;
 }
 
 .input {
     width: 90%;
-    padding: 12px 14px;
-    border-radius: 8px;
+    padding: 9.6px 11.2px;
+    border-radius: 6.4px;
     border: 1px solid #e6eef8;
     background: linear-gradient(180deg, #fff, #fbfdff);
-    font-size: 1rem;
+    font-size: 0.8rem;
     outline: none;
     transition: box-shadow .12s ease, border-color .12s ease;
 }
 
 .input:focus {
-    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.12);
+    box-shadow: 0 4.8px 16px rgba(14, 165, 233, 0.12);
     border-color: #0ea5e9;
 }
 
 .row {
     display: flex;
-    gap: 12px;
+    gap: 9.6px;
 }
 
 .row .field { flex: 1; }
 
 .small {
-    width: 110px;
+    width: 88px;
 }
 
-.muted { color: #64748b; font-size: 0.88rem; }
+.muted { color: #64748b; font-size: 0.7rem; }
 
 .card-brand {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.95rem;
+    gap: 6.4px;
+    font-size: 0.76rem;
     color: #0f172a;
 }
 
 .brand-dot {
-    width: 36px;
-    height: 24px;
-    border-radius: 6px;
+    width: 28.8px;
+    height: 19.2px;
+    border-radius: 4.8px;
     display: inline-block;
     text-align: center;
-    line-height: 24px;
+    line-height: 19.2px;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 0.64rem;
     color: white;
 }
 
@@ -148,27 +148,27 @@ label {
 
 .error {
     color: #b91c1c;
-    font-size: 0.85rem;
-    margin-top: 6px;
+    font-size: 0.68rem;
+    margin-top: 4.8px;
 }
 
 .submit-row {
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:12px;
-    margin-top: 10px;
+    gap:9.6px;
+    margin-top: 8px;
 }
 
 .btn {
     background: linear-gradient(180deg,#0ea5e9,#0284c7);
     color: white;
     border: none;
-    padding: 12px 16px;
-    border-radius: 8px;
+    padding: 9.6px 12.8px;
+    border-radius: 6.4px;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 6px 18px rgba(2, 132, 199, 0.18);
+    box-shadow: 0 4.8px 14.4px rgba(2, 132, 199, 0.18);
 }
 
 .btn:disabled {
@@ -177,7 +177,7 @@ label {
 }
 
 .helper {
-    font-size: 0.85rem;
+    font-size: 0.68rem;
     color: #475569;
 }
 
