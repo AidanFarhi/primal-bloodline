@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
+    background-color: black;
 }
 
 p {
@@ -18,7 +19,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .home-section {
-    height: 90.01vh;
+    height: 90.025vh;
     background-color: rgb(255, 255, 255);
     color: black;
     font-family: Amita;
@@ -70,7 +71,7 @@ a, a:hover, a:focus, a:active {
 .section-image-large {
     height: 10rem;
     width: 10rem;
-    border-radius: 50%;
+    border-radius: 8px;
     margin-top: 2rem;
 }
 
@@ -105,7 +106,7 @@ a, a:hover, a:focus, a:active {
 .section-image-small {
     height: 10rem;
     width: 10rem;
-    border-radius: 50%;
+    border-radius: 8px;
     margin-top: 2rem;
 }
 
@@ -150,16 +151,15 @@ a, a:hover, a:focus, a:active {
 ============================ */
 @media (min-width: 1200px) {
     .section-image-large {
-        height: 15rem;
-        width: 15rem;
-        border-radius: 50%;
+        height: 25rem;
+        width: 25rem;
     }
 
     .content-container {
-        flex-direction: row;
-        align-items: center;
-        padding-left: 20vw;
-        padding-right: 20vw;
+        /* flex-direction: row;
+        align-items: center; */
+        padding-left: 15vw;
+        padding-right: 15vw;
     }
 
     .section-header {
@@ -173,6 +173,5 @@ a, a:hover, a:focus, a:active {
     .section-image-small {
         height: 13rem;
         width: 13rem;
-        border-radius: 50%;
     }
 }
