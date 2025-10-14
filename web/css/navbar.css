@@ -10,7 +10,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    font-family: "Cinzel Decorative", serif;;
+    font-family: "Cinzel Decorative", serif;
     transition: all 0.2s ease;
     z-index: 100;
     background-color: rgb(25, 25, 25);
@@ -172,6 +172,7 @@
     }
 
     .close-nav-button {
+        font-family: "Cinzel Decorative", serif;
         position: absolute;
         top: 1rem;
         left: 1rem;
@@ -190,6 +191,7 @@
 
     .right-nav-links {
         position: fixed;
+        font-family: "Cinzel Decorative", serif;
         top: 0;
         right: 0;
         height: 100vh;
