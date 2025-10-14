@@ -28,7 +28,7 @@
     height: 2rem;
     width: 2rem;
     margin-top: 0.25rem;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 
 .site-title {
@@ -162,7 +162,7 @@
     .left-icon {
         height: 3rem;
         width: 3rem;
-        border-radius: 50%;
+        background: transparent;
     }
 
     .site-title {

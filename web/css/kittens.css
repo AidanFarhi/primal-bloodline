@@ -6,7 +6,7 @@
     margin-top: 10vh;
     height: 90vh;
     width: 100vw;
-    font-family: Amita;
+    font-family: "Cinzel Decorative", serif;;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -14,10 +14,6 @@
 }
 
 .kitten-card {
-    /* border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px; */
     border-radius: 8px;
     width: 26rem;
     margin: 4.5rem;
@@ -28,8 +24,6 @@
 }
 
 .kitten-card-image {
-    /* border-top-left-radius: 50%;
-    border-top-right-radius: 50%; */
     border-radius: 8px;
     width: 100%;
     cursor: pointer;
@@ -49,7 +43,7 @@
 }
 
 .kitten-card-name {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .kitten-card-price {
@@ -58,10 +52,11 @@
 }
 
 .kitten-card-description {
-    font-size: 14px;
+    font-size: 10px;
 }
 
 .kitten-link {
+    font-size: 10px;
     background-color: rgb(25, 25, 25);
     color: rgb(255, 255, 255);
     text-align: center;
@@ -120,14 +115,15 @@
     }
 
     .kitten-card-name {
-        font-size: x-large;
+        font-size: 24px;
     }
 
     .kitten-card-description {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .kitten-link {
+        font-size: 12px;
         padding-left: 50px;
         padding-right: 50px;
         padding-top: 8px;
