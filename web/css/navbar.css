@@ -10,7 +10,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    font-family: Amita;
+    font-family: "Cinzel Decorative", serif;;
     transition: all 0.2s ease;
     z-index: 100;
     background-color: rgb(25, 25, 25);
