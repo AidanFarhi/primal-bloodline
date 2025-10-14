@@ -35,11 +35,12 @@ a, a:hover, a:focus, a:active {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 200vh;
+    height: 75vh;
+    background-color: rgb(47, 47, 47);
 }
 
 #mission-section {
-    margin-top: 100vh;
+    margin-top: 25vh;
     background-color: transparent;
     color: rgb(239, 239, 239);
     width: 100%;
@@ -156,6 +157,11 @@ a, a:hover, a:focus, a:active {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        height: 200vh;
+    }
+
+    #mission-section {
+        margin-top: 100vh;
     }
 
     .section-image-large {
