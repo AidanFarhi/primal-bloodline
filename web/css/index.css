@@ -19,7 +19,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .home-section {
-    height: 90.025vh;
+    /* height: 60vh; */
     background-color: rgb(255, 255, 255);
     color: black;
     font-family: "Cinzel Decorative", serif;;
@@ -54,11 +54,11 @@ a, a:hover, a:focus, a:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 8vh;
+    padding-top: 7vh;
 }
 
 .section-header {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .content-container {
@@ -67,19 +67,19 @@ a, a:hover, a:focus, a:active {
     align-items: center;
     padding-left: 3vw;
     padding-right: 3vw;
-    height: 100%;
+    padding-bottom: 7vh;
 }
 
 .section-image-large {
-    height: 10rem;
-    width: 10rem;
+    height: 13rem;
+    width: 13rem;
     border-radius: 8px;
     margin-top: 2rem;
 }
 
 .section-text {
     padding-top: 2rem;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .image-button-container {
@@ -105,6 +105,11 @@ a, a:hover, a:focus, a:active {
     transition: all 0.15s ease;
 }
 
+.section-link.light {
+    border: 1px solid white;
+    color: white;
+}
+
 .section-image-small {
     height: 10rem;
     width: 10rem;
@@ -113,16 +118,17 @@ a, a:hover, a:focus, a:active {
 }
 
 #contact-section {
+    height: 90.025vh;
     color: rgb(255, 255, 255);
     background-color: black;
 }
 
-@font-face {
+/* @font-face {
     font-family: 'PBLFont';
     src: url('/web/fonts/Primal_Bloodline_v2.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 /* =========================
    Smallest phones (≥320px)
@@ -146,6 +152,10 @@ a, a:hover, a:focus, a:active {
    Small desktops (≥992px)
 ============================ */
 @media (min-width: 992px) {
+    .home-section {
+        height: 90.025vh;
+    }
+
     #hero-section {
         background-image: url("/web/images/don_don_bw_glowing_gradient.jpeg");
         background-size: cover;

@@ -6,6 +6,6 @@ Adia's breeder website.
 
 - Make gaps between sections smaller on home screen
 
-- Add contract download link
-
 - Fix upper margin on details/payment views
+
+- Fix min height for shorter screens
