@@ -29,6 +29,7 @@ func main() {
 	mux.HandleFunc("GET /cat-details/", handler.NewCatDetailsHandler(catService))
 	mux.HandleFunc("GET /inquire/", handler.InquireHandler)
 	mux.HandleFunc("POST /api/contact", handler.NewContactHandler(contactService))
+	mux.HandleFunc("GET /api/contract", handler.NewContractHandler(conf.ContractPath))
 
 	handlerWithRedirect := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if !conf.Develop && r.Header.Get("X-Forwarded-Proto") != "https" {

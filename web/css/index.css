@@ -146,12 +146,6 @@ a, a:hover, a:focus, a:active {
    Small desktops (≥992px)
 ============================ */
 @media (min-width: 992px) {
-}
-
-/* =========================
-   Large desktops (≥1200px)
-============================ */
-@media (min-width: 1200px) {
     #hero-section {
         background-image: url("/web/images/don_don_bw_glowing_gradient.jpeg");
         background-size: cover;
@@ -185,4 +179,10 @@ a, a:hover, a:focus, a:active {
         height: 13rem;
         width: 13rem;
     }
+}
+
+/* =========================
+   Large desktops (≥1200px)
+============================ */
+@media (min-width: 1200px) {
 }

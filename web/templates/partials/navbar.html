@@ -61,10 +61,22 @@
         <div class="burger-line"></div>
     </div>
     <div class="right-nav-links">
-        <button class="close-nav-button">X</button>
-        <a class="nav-link right-nav-link" href="/">Home</a>
-        <a class="nav-link right-nav-link" href="/kittens">Kittens</a>
-        <a class="nav-link right-nav-link" href="/contract">Contract</a>
+        <button class="close-nav-button">
+            <img class="close-nav-icon" src="/web/images/icons/right-arrow-icon.png" alt="icon">
+        </button>
+        <div class="nav-item">
+            <img class="nav-icon" src="/web/images/icons/home-icon.png" alt="icon">
+            <a class="nav-link right-nav-link" href="/">Home</a>
+        </div>
+        <div class="nav-item">
+            <img class="nav-icon" src="/web/images/icons/cat-icon.png" alt="icon">
+            <a class="nav-link right-nav-link" href="/kittens">Kittens</a>
+        </div>
+        <div class="nav-item">
+            <img class="nav-icon" src="/web/images/icons/contract-icon.png" alt="icon">
+            <a class="nav-link right-nav-link" href="/api/contract" download>Contract</a>
+            <img class="nav-icon-small" src="/web/images/icons/download-icon.png" alt="icon">
+        </div>
     </div>
 </nav>
 {{ end }}

@@ -88,12 +88,6 @@
    Small desktops (≥992px)
 ============================ */
 @media (min-width: 992px) {
-}
-
-/* =========================
-   Large desktops (≥1200px)
-============================ */
-@media (min-width: 1200px) {
     .cat-details-container {
         flex-direction: row;
     }
@@ -125,4 +119,10 @@
         margin-right: 10rem;
         margin-top: 1rem;
     }
+}
+
+/* =========================
+   Large desktops (≥1200px)
+============================ */
+@media (min-width: 1200px) {
 }

@@ -12,6 +12,7 @@ type Config struct {
 	Port                       int
 	Develop                    bool
 	JSONPath                   string
+	ContractPath               string
 }
 
 func (c *Config) Load() {
@@ -21,4 +22,5 @@ func (c *Config) Load() {
 	c.Port, _ = strconv.Atoi(os.Getenv("PORT"))
 	c.Develop, _ = strconv.ParseBool(os.Getenv("DEVELOP"))
 	c.JSONPath = os.Getenv("JSON_PATH")
+	c.ContractPath = os.Getenv("CONTRACT_PATH")
 }

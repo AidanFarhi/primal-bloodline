@@ -1,8 +1,10 @@
 package handler
 
 import (
+	"fmt"
 	"html/template"
 	"net/http"
+	"os"
 	"path"
 	"primalbl/model"
 	"primalbl/service"
@@ -108,5 +110,30 @@ func NewContactHandler(cs service.ContactService) http.HandlerFunc {
 		cs.SendMessage(name, number, message)
 		http.Redirect(w, r, "/", http.StatusFound)
 		return
+	}
+}
+
+// GET /api/contract
+func NewContractHandler(contractPath string) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		file, err := os.Open(contractPath)
+		if err != nil {
+			// TODO: serve up custom error page
+			http.Error(w, "Oops! Could not get contract...", http.StatusInternalServerError)
+			fmt.Println("error reading contract")
+			return
+		}
+		defer file.Close()
+		fi, err := file.Stat()
+		if err != nil {
+			// TODO: serve up custom error page
+			http.Error(w, "Oops! Could not get file info...", http.StatusInternalServerError)
+			fmt.Println("error getting file info")
+			return
+		}
+		modTime := fi.ModTime()
+		w.Header().Set("Content-Type", "application/pdf")
+		w.Header().Set("Content-Disposition", "attachment; filename=\"PrimalBloodlineContract.pdf\"")
+		http.ServeContent(w, r, "PrimalBloodlineContract.pdf", modTime, file)
 	}
 }

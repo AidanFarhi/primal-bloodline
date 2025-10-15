@@ -28,7 +28,6 @@
     height: 2rem;
     width: 2rem;
     margin-top: 0.25rem;
-    /* border-radius: 50%; */
 }
 
 .site-title {
@@ -74,14 +73,41 @@
     top: 0;
     right: 0;
     height: 100vh;
-    width: 40vw;
+    width: 50vw;
     display: flex;
     padding-top: 3rem;
     flex-direction: column;
-    align-items: center;
     background-color: rgb(21, 21, 21);
     transform: translateX(100%);
     transition: transform 0.3s ease;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-item:hover,
+.nav-item:focus {
+    opacity: 0.9;
+    color: white; /* stays white */
+}
+
+.nav-icon {
+    height: 1.25rem;
+    width: 1.25rem;
+    opacity: 0.9;
+}
+
+.nav-icon-small {
+    align-self: flex-start;
+    height: 0.7rem;
+    width: 0.7rem;
+    margin-left: 0.75rem;
 }
 
 .close-nav-button {
@@ -90,21 +116,19 @@
     left: 1rem;
     background: transparent;
     border: none;
-    font-size: 0.75rem;
-    color: white;
     cursor: pointer;
 }
 
-.nav-link {
-    font-size: 0.75rem;
-    padding-bottom: 1rem;
-    color: white;
+.close-nav-icon {
+    height: 1.25rem;
+    width: 1.25rem;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-    opacity: 0.9;
-    color: white; /* stays white */
+.nav-link {
+    margin-top: 0.1rem;
+    margin-left: 1rem;
+    font-size: 0.75rem;
+    color: white;
 }
 
 .right-nav-links.open {
@@ -149,12 +173,6 @@
    Small desktops (≥992px)
    ========================= */
 @media (min-width: 992px) {
-}
-
-/* =========================
-   Large desktops (≥1200px)
-   ========================= */
-@media (min-width: 1200px) {
     .left-nav-container {
         margin-left: 2rem;
     }
@@ -171,38 +189,32 @@
         fill: white;
     }
 
-    .close-nav-button {
-        font-family: "Cinzel Decorative", serif;
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        background: transparent;
-        border: none;
-        font-size: 1.25rem;
-        color: white;
-        cursor: pointer;
+    .close-nav-icon {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .nav-item {
+        margin-top: 3rem;
+    }
+
+    .nav-icon {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .nav-icon-small {
+        height: 0.8rem;
+        width: 0.8rem;
+        margin-left: 0.5rem;
     }
 
     .nav-link {
-        font-size: 1.25rem;
-        padding-bottom: 1rem;
-        color: white;
+        font-size: 1rem;
     }
 
     .right-nav-links {
-        position: fixed;
-        font-family: "Cinzel Decorative", serif;
-        top: 0;
-        right: 0;
-        height: 100vh;
         width: 15vw;
-        display: flex;
-        padding-top: 3rem;
-        flex-direction: column;
-        align-items: center;
-        background-color: rgb(21, 21, 21);
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
     }
 
     .burger-menu {
@@ -216,4 +228,10 @@
         background-color: white;
         margin-bottom: 0.5rem;
     }
+}
+
+/* =========================
+   Large desktops (≥1200px)
+   ========================= */
+@media (min-width: 1200px) {
 }

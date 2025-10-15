@@ -97,12 +97,6 @@
    Small desktops (≥992px)
 ============================ */
 @media (min-width: 992px) {
-}
-
-/* =========================
-   Large desktops (≥1200px)
-============================ */
-@media (min-width: 1200px) {
     #kittens-main-container {
         height: 90vh;
         margin-top: 10vh;
@@ -132,4 +126,10 @@
         margin-top: 1rem;
         margin-bottom: 2rem;
     }
+}
+
+/* =========================
+   Large desktops (≥1200px)
+============================ */
+@media (min-width: 1200px) {
 }
