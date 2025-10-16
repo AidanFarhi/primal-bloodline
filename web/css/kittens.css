@@ -5,13 +5,12 @@
     background-color: white;
     margin-top: 10vh;
     min-height: 90vh;
-    padding-bottom: 20vh;
+    padding-bottom: 5vh;
     width: 100vw;
     font-family: "Cinzel Decorative", serif;;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    overflow-y: auto;
 }
 
 .kitten-card {
