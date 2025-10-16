@@ -93,12 +93,6 @@
    Tablets (≥768px)
 ============================ */
 @media (min-width: 768px) {
-}
-
-/* =========================
-   Small desktops (≥992px)
-============================ */
-@media (min-width: 992px) {
     #kittens-main-container {
         background-color: white;
         margin-top: 10vh;
@@ -113,15 +107,15 @@
     }
 
     .kitten-card {
-        width: 25vw;
+        max-width: 26vw;
     }
 
     .kitten-card-name {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .kitten-card-description {
-        font-size: 14px;
+        font-size: 11px;
     }
 
     .kitten-link {
@@ -137,7 +131,24 @@
 }
 
 /* =========================
+   Small desktops (≥992px)
+============================ */
+@media (min-width: 992px) {
+}
+
+/* =========================
    Large desktops (≥1200px)
 ============================ */
 @media (min-width: 1200px) {
+    .kitten-card {
+        max-width: 24vw;
+    }
+
+    .kitten-card-name {
+        font-size: 24px;
+    }
+
+    .kitten-card-description {
+        font-size: 14px;
+    }
 }

@@ -109,6 +109,10 @@ a, a:hover, a:focus, a:active {
     color: white;
 }
 
+.section-link.light:hover {
+    background-color: rgb(95, 95, 95);
+}
+
 .section-image-small {
     height: 10rem;
     width: 10rem;
