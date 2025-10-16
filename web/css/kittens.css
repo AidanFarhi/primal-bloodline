@@ -14,7 +14,7 @@
 }
 
 #kittens-main-container .kitten-card:last-child {
-    margin-bottom: 5vh;
+    padding-bottom: 5vh;
 }
 
 .kitten-card {

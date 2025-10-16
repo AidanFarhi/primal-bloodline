@@ -9,3 +9,5 @@ Adia's breeder website.
 - Fix upper margin on details/payment views
 
 - Fix min height for shorter screens
+
+- Figure out why kitten view is not showing margin
