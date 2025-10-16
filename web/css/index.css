@@ -169,14 +169,14 @@ a, a:hover, a:focus, a:active {
     }
 
     .section-header {
-        font-size: 32px;
+        font-size: 28px;
         opacity: 0.9;
     }
 
     .section-text {
         padding-left: 30vw;
         padding-right: 30vw;
-        font-size: 18px;
+        font-size: 17px;
         opacity: 0.7;
     }
 
@@ -191,7 +191,15 @@ a, a:hover, a:focus, a:active {
 ============================ */
 @media (min-width: 1200px) {
     .section-image-large {
-        height: 28rem;
-        width: 28rem;
+        height: 23rem;
+        width: 23rem;
+    }
+
+    .section-header {
+        font-size: 30px;
+    }
+
+    .section-text {
+        font-size: 18px;
     }
 }
