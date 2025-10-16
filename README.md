@@ -11,3 +11,5 @@ Adia's breeder website.
 - Fix min height for shorter screens
 
 - Figure out why kitten view is not showing margin
+
+- Conditional JS rendering?

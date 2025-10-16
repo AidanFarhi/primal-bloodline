@@ -19,7 +19,6 @@ a, a:hover, a:focus, a:active {
 }
 
 .home-section {
-    /* height: 60vh; */
     background-color: rgb(255, 255, 255);
     color: black;
     font-family: "Cinzel Decorative", serif;;
@@ -152,10 +151,6 @@ a, a:hover, a:focus, a:active {
    Small desktops (≥992px)
 ============================ */
 @media (min-width: 992px) {
-    .home-section {
-        height: 90.025vh;
-    }
-
     #hero-section {
         background-image: url("/web/images/don_don_bw_glowing_gradient.jpeg");
         background-size: cover;
