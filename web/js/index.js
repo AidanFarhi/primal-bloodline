@@ -20,12 +20,14 @@ const middleBottomDivs = [
 
 // pause, no Diddy
 function touching(element1, element2) {
-    const rect1 = element1.getBoundingClientRect()
-    const rect2 = element2.getBoundingClientRect()
-    return !(
-        rect1.right < rect2.left || rect1.left > rect2.right ||
-        rect1.bottom < rect2.top || rect1.top > rect2.bottom
-    )
+    if (!element1 === null && element2 === null) {
+        const rect1 = element1.getBoundingClientRect()
+        const rect2 = element2.getBoundingClientRect()
+        return !(
+            rect1.right < rect2.left || rect1.left > rect2.right ||
+            rect1.bottom < rect2.top || rect1.top > rect2.bottom
+        )
+    }
 }
 
 window.addEventListener('scroll', () => {
