@@ -164,8 +164,8 @@ a, a:hover, a:focus, a:active {
     }
 
     .section-image-large {
-        height: 28rem;
-        width: 28rem;
+        height: 20rem;
+        width: 20rem;
     }
 
     .section-header {
@@ -190,4 +190,8 @@ a, a:hover, a:focus, a:active {
    Large desktops (≥1200px)
 ============================ */
 @media (min-width: 1200px) {
+    .section-image-large {
+        height: 28rem;
+        width: 28rem;
+    }
 }
