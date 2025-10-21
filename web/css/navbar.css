@@ -30,9 +30,28 @@
     margin-top: 0.25rem;
 }
 
+.left-nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .site-title {
     width: 6rem;
     fill: white;
+}
+
+@font-face {
+    font-family: 'PBLFont';
+    src: url('/web/fonts/Primal_Bloodline_v2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.slogan {
+    font-size: 4px;
+    font-family: 'PBLFont';
+    color: white;
 }
 
 #main-navbar.top {
@@ -50,6 +69,10 @@
     fill: white;
 }
 
+#main-navbar.middle .slogan {
+    color: white;
+}
+
 #main-navbar.middle-bottom {
     background-color: rgb(255, 255, 255);
     color: black;
@@ -59,6 +82,11 @@
     fill: black;
 }
 
+#main-navbar.middle-bottom .slogan {
+    color: black;
+}
+
+
 #main-navbar.bottom {
     background-color: black;
     color: rgb(255, 255, 255);
@@ -66,6 +94,10 @@
 
 #main-navbar.bottom .site-title {
     fill: white;
+}
+
+#main-navbar.bottom .slogan {
+    color: white;
 }
 
 .right-nav-links {
@@ -187,6 +219,10 @@
         display: block;
         width: 10rem;
         fill: white;
+    }
+
+    .slogan {
+        font-size: 6px;
     }
 
     .close-nav-icon {
