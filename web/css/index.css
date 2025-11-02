@@ -21,7 +21,7 @@ a, a:hover, a:focus, a:active {
 .home-section {
     background-color: rgb(255, 255, 255);
     color: black;
-    font-family: "Cinzel Decorative", serif;;
+    font-family: "Cinzel Decorative", serif;
     /* font-family: 'PBLFont'; */
     display: flex;
     flex-direction: column;
@@ -128,7 +128,7 @@ a, a:hover, a:focus, a:active {
 
 /* @font-face {
     font-family: 'PBLFont';
-    src: url('/web/fonts/Primal_Bloodline_v2.ttf') format('truetype');
+    src: url('/web/fonts/Primal_Bloodline_v3.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 } */
