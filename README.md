@@ -1,15 +1,11 @@
-# primal-bloodline
+# To Run Project Locally
 
-Adia's breeder website.
+`make local`
 
-## TODOS
+# To Deploy to Heroku without Config Update
 
-- Make gaps between sections smaller on home screen
+`make deploy`
 
-- Fix upper margin on details/payment views
+# To Deploy to Heroku with Config Update
 
-- Fix min height for shorter screens
-
-- Figure out why kitten view is not showing margin
-
-- Conditional JS rendering?
+`make deploy-with-config`
