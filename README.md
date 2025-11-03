@@ -9,3 +9,9 @@
 # To Deploy to Heroku with Config Update
 
 `make deploy-with-config`
+
+# TODOS
+
+- Contact page responsive & styling
+
+- After clicking contact page, success banner/message and redirect

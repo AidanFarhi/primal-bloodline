@@ -24,7 +24,7 @@ func ExtractCatNameFromPath(urlPath, prefix string) string {
 }
 
 // GET /
-func IndexHandler(w http.ResponseWriter, r *http.Request) {
+func GetIndexPage(w http.ResponseWriter, r *http.Request) {
 	pageData := model.PageData{
 		NavbarID:     mainNavbarID,
 		ImageCatName: "",
@@ -39,8 +39,24 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	t.Execute(w, pageData)
 }
 
+// GET /contact
+func GetContactPage(w http.ResponseWriter, r *http.Request) {
+	pageData := model.PageData{
+		NavbarID:     alternateNavbarID,
+		ImageCatName: "",
+		CatName:      "",
+		Cats:         []model.Kitten{},
+	}
+	t, _ := template.ParseFiles(
+		"web/templates/layout.html",
+		"web/templates/partials/navbar.html",
+		"web/templates/pages/contact.html",
+	)
+	t.Execute(w, pageData)
+}
+
 // GET /kittens
-func NewKittensHandler(cs service.CatService) http.HandlerFunc {
+func GetKittensPage(cs service.CatService) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		kittens := cs.GetAllCats()
 		pageData := model.PageData{
@@ -60,7 +76,7 @@ func NewKittensHandler(cs service.CatService) http.HandlerFunc {
 }
 
 // GET /cat-details/{catName}
-func NewCatDetailsHandler(cs service.CatService) http.HandlerFunc {
+func GetCatDetailsPage(cs service.CatService) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		catName := ExtractCatNameFromPath(r.URL.Path, "/cat-details/")
 		kittens := []model.Kitten{}
@@ -83,7 +99,7 @@ func NewCatDetailsHandler(cs service.CatService) http.HandlerFunc {
 }
 
 // GET /inquire/{catName}
-func InquireHandler(w http.ResponseWriter, r *http.Request) {
+func GetInquirePage(w http.ResponseWriter, r *http.Request) {
 	catName := strings.TrimPrefix(r.URL.Path, "/inquire/")
 	catName = path.Clean(catName)
 	titleCatName := strings.ToUpper(catName[0:1]) + catName[1:]
@@ -102,7 +118,7 @@ func InquireHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 // POST /api/contact
-func NewContactHandler(cs service.ContactService) http.HandlerFunc {
+func PostContact(cs service.ContactService) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		name := r.FormValue("name")
 		number := r.FormValue("number")
@@ -114,7 +130,7 @@ func NewContactHandler(cs service.ContactService) http.HandlerFunc {
 }
 
 // GET /api/contract
-func NewContractHandler(contractPath string) http.HandlerFunc {
+func GetContract(contractPath string) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		file, err := os.Open(contractPath)
 		if err != nil {

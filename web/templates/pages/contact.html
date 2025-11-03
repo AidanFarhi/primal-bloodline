@@ -1,0 +1,47 @@
+{{ template "layout" }}
+{{ define "content" }}
+{{ template "navbar" . }}
+<div class="contact-main-container">
+    <div class="contact-image-container">
+        <img class="contact-image" src="/web/images/cat_calling.png" alt="a cat picture">
+    </div>
+      <div class="form-container">
+        <p class="form-header">Contact</p>
+        <p class="form-sub-text">
+            Send us any questions you have.
+        </p>
+        <form class="contact-form" action="/api/contact" method="post">
+            <label class="form-label" for="name">Name</label>
+            <br>
+            <input class="form-input text-input" type="text" id="name" name="name" maxlength="40" required>
+            <br>
+            <label class="form-label" for="number">Phone Number</label>
+            <br>
+            <input class="form-input text-input" type="tel" maxlength="14" id="number" name="number" required>
+            <br>
+            <label class="form-label" for="message">Message</label>
+            <br>
+            <textarea class="form-input text-message" id="message" name="message" maxlength="500" required></textarea>
+            <br>
+            <button class="contact-submit-button" type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+<script>
+    document.getElementById('number').addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, ''); // strip non-digits
+        if (value.length > 6) {
+            // Format: (XXX) XXX-XXXX
+            value = value.replace(/(\d{3})(\d{3})(\d{0,4}).*/, '($1) $2-$3');
+        } else if (value.length > 3) {
+            // Format: (XXX) XXX
+            value = value.replace(/(\d{3})(\d{0,3})/, '($1) $2');
+        } else if (value.length > 0) {
+            // Start adding the opening (
+            value = value.replace(/(\d{0,3})/, '($1');
+        }
+        e.target.value = value;
+    });
+</script>
+</div>
+{{ end }}

@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 	"primalbl/config"
@@ -24,16 +23,16 @@ func main() {
 	mux := http.NewServeMux()
 
 	mux.Handle("/web/", fs)
-	mux.HandleFunc("/", handler.IndexHandler)
-	mux.HandleFunc("GET /kittens", handler.NewKittensHandler(catService))
-	mux.HandleFunc("GET /cat-details/", handler.NewCatDetailsHandler(catService))
-	mux.HandleFunc("GET /inquire/", handler.InquireHandler)
-	mux.HandleFunc("POST /api/contact", handler.NewContactHandler(contactService))
-	mux.HandleFunc("GET /api/contract", handler.NewContractHandler(conf.ContractPath))
+	mux.HandleFunc("/", handler.GetIndexPage)
+	mux.HandleFunc("GET /kittens", handler.GetKittensPage(catService))
+	mux.HandleFunc("GET /cat-details/", handler.GetCatDetailsPage(catService))
+	mux.HandleFunc("GET /inquire/", handler.GetInquirePage)
+	mux.HandleFunc("GET /contact", handler.GetContactPage)
+	mux.HandleFunc("POST /api/contact", handler.PostContact(contactService))
+	mux.HandleFunc("GET /api/contract", handler.GetContract(conf.ContractPath))
 
 	handlerWithRedirect := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if !conf.Develop && r.Header.Get("X-Forwarded-Proto") != "https" {
-			fmt.Println("redirecting")
 			url := "https://" + r.Host + r.URL.RequestURI()
 			http.Redirect(w, r, url, http.StatusMovedPermanently)
 			return
